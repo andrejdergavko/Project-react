@@ -1,0 +1,26 @@
+@import "../../style/variables.scss";
+
+.user-box {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: $text-color;
+    font-size: 16px;
+}
+
+.user-box__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    color: rgb(155, 155, 155);
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.user-box__email {
+    display: inline-block;
+    margin: 0;
+}

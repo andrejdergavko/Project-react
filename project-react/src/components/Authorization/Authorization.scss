@@ -1,0 +1,67 @@
+@import "../../style/variables.scss";
+
+.authorization {
+  width: 500px;
+  background-color: #fff;
+  box-shadow: 1px 1px 47px 16px rgba(61, 61, 61, 0.31);
+}
+
+.authorization__preview {
+  position: relative;
+  width: 100%;
+
+  padding: 80px 60px;
+  background-color: rgb(75, 94, 201);
+  box-sizing: border-box;
+  background-image: url("https://businesssuccesssystems.com.au/wp-content/uploads/2019/03/geo-background-dark.jpg");
+  background-size: cover;
+  color: $text-color;
+}
+
+.authorization__header {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.authorization__text {
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.authorization__registration-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 200;
+}
+
+.authorization__form {
+  padding: 60px;
+}
+
+.authorization__title {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.authorization__inpyt {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  background-color: rgb(113, 76, 172);
+  border-radius: 50px;
+}
+
+.authorization__inpyt::placeholder {
+  color: $text-color;
+}
+
+// https://st.depositphotos.com/2010295/4321/v/950/depositphotos_43213547-stock-illustration-seamless-background-shopping-trolley.jpg
