@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Checkbox from "material-ui/Checkbox";
+import Checkbox from "@material-ui/core/Checkbox";
 
 import "./Authorization.scss";
 
@@ -11,7 +11,7 @@ function Authorization(props) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    props.checkEmailAndPassword(email, password, isRemembered);
+    props.loginUser(email, password, isRemembered);
   }
 
   return (
@@ -29,38 +29,47 @@ function Authorization(props) {
           Зарегистрироваться
         </button>
       </div>
+
       <form className="authorization__form" onSubmit={handleSubmit}>
-        <h3 className="authorization__title">Вход</h3>
+        <label className="authorization__label" htmlFor="email">
+          Email
+        </label>
         <input
           className="authorization__inpyt"
           type="email"
           value={email}
           onChange={event => setEmail(event.target.value)}
           name="email"
-          placeholder="Email"
+          placeholder="Введите email"
         />
+
+        <label className="authorization__label " htmlFor="password">
+          Пароль
+        </label>
         <input
-          className="authorization__inpyt"
+          className="authorization__inpyt "
           type="password"
           value={password}
           onChange={event => setPassword(event.target.value)}
           name="password"
-          placeholder="Пароль"
+          placeholder="Введите пароль"
         />
-        <Checkbox
-          label="Запомнить меня"
-          labelPosition="left"
-          checked={isRemembered}
-          onChange={event => setIsRemembered(event.target.checked)}
-          name="isRemembered"
-        />
-        {/* <input
-          type="checkbox"
-          checked={isRemembered}
-          onChange={event => setIsRemembered(event.target.checked)}
-          name="isRemembered"
-        /> */}
-        <input type="submit" />
+
+        <div className="authorization__checkbox-wrapper">
+          <Checkbox
+            checked={isRemembered}
+            onChange={event => setIsRemembered(event.target.checked)}
+            value="primary"
+            color="primary"
+            inputProps={{ "aria-label": "primary checkbox" }}
+            name="isRemembered"
+          />
+          <label className="authorization__label authorization__label_checkbox">
+            Запомнить меня
+          </label>
+        </div>
+
+        <input className="authorization__submit" type="submit" value="Войти" />
       </form>
     </div>
   );

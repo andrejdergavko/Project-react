@@ -1,0 +1,88 @@
+{
+    auth: {
+        authorixzedUserId: 5,
+        authorixzedUserEmail:'andrej@mail.ru',
+        currency: 'бел. руб'
+    }
+
+    operations: {
+        byId: {
+
+            21654: {
+            id: 21654,
+            date: 13657465146484,
+            category: 2216545
+            value: 25
+            },
+
+            21654: {
+            id: 21654,
+            date: 13657465146484,
+            category: 21654
+            value: 25
+            },
+
+            21654: {
+            id: 21654,
+            date: 13657465146484,
+            category: 21654
+            value: 25
+            },
+
+        },
+
+        allIds: [21654, 21654, 21654]
+    },
+
+    categores: {
+        byId: {
+
+            21654: {
+            id: 21654,
+            title: 'Дом,
+            color: '#555',
+            icon: '',
+            },
+
+            21654: {
+            id: 21654,
+            title: 'Дом,
+            color: '#555',
+            icon: '',
+            },
+
+            21654: {
+            id: 21654,
+            title: 'Дом,
+            color: '#555',
+            icon: '',
+            },
+
+        },
+
+        allIds: [21654, 21654, 21654]
+    },
+    
+
+}
+
+
+{
+    "users": [
+        {
+            "id": 1,
+            "email": "Andrej94@list.ru",
+            "password": "111"
+        },
+        {
+            "id": 2,
+            "email": "Andrej94@list.ru",
+            "password": "222"
+        },
+        {
+            "id": 3,
+            "email": "Andrej94@list.ru",
+            "password": "333"
+        }
+    ]
+}

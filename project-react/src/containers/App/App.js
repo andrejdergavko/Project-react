@@ -4,10 +4,10 @@ import { Redirect, Route } from "react-router-dom";
 
 import "./App.scss";
 
-import Aside from "./containers/Aside/Aside";
-import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
-import AuthContainer from './containers/AuthContainer/AuthContainer';
+import Main from "../../components/Main/Main";
+import Aside from "../Aside/Aside";
+import Header from "../../components/Header/Header";
+import AuthContainer from '../AuthContainer/AuthContainer';
 
 class App extends Component {
   render() {

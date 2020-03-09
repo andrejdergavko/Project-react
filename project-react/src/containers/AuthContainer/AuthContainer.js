@@ -4,7 +4,7 @@ import { Redirect } from "react-router-dom";
 
 import Authorization from "../../components/Authorization/Authorization";
 import Registration from "../../components/Registration/Registration";
-import { addAutorizedUserId } from "../../store/auth/actions";
+import { loginUser } from "../../store/auth/actions";
 
 import "./AuthContainer.scss";
 
@@ -15,28 +15,7 @@ class AuthContainer extends Component {
       registrationMode: false
     };
 
-    this.checkEmailAndPassword = this.checkEmailAndPassword.bind(this);
     this.changeRegistrationMode = this.changeRegistrationMode.bind(this);
-  }
-
-  checkEmailAndPassword(email, password, isRemembered) {
-    console.log(this.props);
-    const url = `http://localhost:3001/users?email=${email}&password=${password}`;
-    fetch(url)
-      .then(response => response.json())
-      .then(response => {
-        if (response[0]) {
-          if (isRemembered) this.saveAuthUserIdToLocalStorage(response[0].id);
-          this.props.addAutorizedUserId(response[0].id);
-          this.props.history.push("/");
-        } else {
-          console.log("Юзер не найден");
-        }
-      });
-  }
-
-  saveAuthUserIdToLocalStorage(id) {
-    localStorage.setItem("mf-autorized-user-id", id);
   }
 
   changeRegistrationMode() {
@@ -57,7 +36,7 @@ class AuthContainer extends Component {
         ) : (
           <Authorization
             changeRegistrationMode={this.changeRegistrationMode}
-            checkEmailAndPassword={this.checkEmailAndPassword}
+            loginUser={this.props.loginUser}
           />
         )}
       </div>
@@ -72,7 +51,7 @@ function mapStateToProps(store) {
 }
 
 const mapDispatchToProps = {
-  addAutorizedUserId
+  loginUser
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AuthContainer);

@@ -1,30 +1,33 @@
 @import "../../style/variables.scss";
 
 .authorization {
-  width: 500px;
+  width: 600px;
   background-color: #fff;
-  box-shadow: 1px 1px 47px 16px rgba(61, 61, 61, 0.31);
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 .authorization__preview {
   position: relative;
   width: 100%;
-
-  padding: 80px 60px;
-  background-color: rgb(75, 94, 201);
+  padding: 90px 90px;
+  background: linear-gradient(
+      rgba(60, 71, 87, 0.808) 20%,
+      rgba(60, 71, 87, 0.808) 60%
+    ),
+    url("https://zozhnik.ru/wp-content/uploads/2016/10/Fresh-Desktop_Imanuel-Pasaka.jpg");
   box-sizing: border-box;
-  background-image: url("https://businesssuccesssystems.com.au/wp-content/uploads/2019/03/geo-background-dark.jpg");
   background-size: cover;
+  background-position: center;
   color: $text-color;
 }
 
 .authorization__header {
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .authorization__text {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 100;
 }
 
@@ -35,33 +38,70 @@
   background-color: transparent;
   border: none;
   color: inherit;
-  font-size: 13px;
+  font-size: 15px;
   font-family: inherit;
-  font-weight: 200;
+  font-weight: 300;
+  transition: 0.1s color;
+}
+
+.authorization__registration-button:hover {
+  color: #a6ccfd;
 }
 
 .authorization__form {
-  padding: 60px;
+  display: grid;
+  grid-template-columns: 25% 70%;
+  padding: 30px 90px 70px;
 }
 
-.authorization__title {
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
+.authorization__label {
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: #777;
+}
+
+.authorization__label_checkbox {
+  grid-column: 1/2;
+  display: inline-block;
+  font-size: 14px;
 }
 
 .authorization__inpyt {
+  grid-column: 2/3;
   display: block;
-  width: 100%;
   margin: 10px 0;
-  padding: 10px;
+  padding: 10px 3px;
   border: none;
-  background-color: rgb(113, 76, 172);
-  border-radius: 50px;
+  border-bottom: 1px solid #bbb;
 }
 
 .authorization__inpyt::placeholder {
-  color: $text-color;
+  color: #bbb;
 }
 
-// https://st.depositphotos.com/2010295/4321/v/950/depositphotos_43213547-stock-illustration-seamless-background-shopping-trolley.jpg
+.authorization__checkbox-wrapper {
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  margin-left: -10px;
+}
+
+.authorization__submit {
+  grid-column: 2/3;
+  margin-top: 10px;
+  padding: 13px 40px;
+  width: min-content;
+  border: none;
+  background-color: #4677b8;
+  border-radius: 50px;
+  color: $text-color;
+  font-weight: 400;
+  font-size: 17px;
+  transition: 0.2s background-color;
+}
+
+.authorization__submit:hover {
+  background-color: #233e61;
+}

@@ -4,13 +4,13 @@ import "./Registration.scss";
 
 function Registration(props) {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isRemembered, setIsRemembered] = useState(false);
+  const [password] = useState("");
+  const [isRemembered] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
 
-    props.checkEmailAndPassword(email, password, isRemembered);
+    props.loginUser(email, password, isRemembered);
   }
 
   return (
