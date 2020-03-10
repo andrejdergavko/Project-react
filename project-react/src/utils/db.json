@@ -15,5 +15,28 @@
             "email": "Andrej94@list.ru",
             "password": "333"
         }
+    ],
+
+    "currencies": [
+        {
+            "id": 1,
+            "title": "Белорусский рубль",
+            "code": "BYN"
+        },
+        {
+            "id": 2,
+            "title": "Российский рубль",
+            "code": "RUB"
+        },
+        {
+            "id": 3,
+            "title": "Доллар США",
+            "code": "$"
+        },
+        {
+            "id": 4,
+            "title": "Евро",
+            "code": "EUR"
+        }
     ]
 }

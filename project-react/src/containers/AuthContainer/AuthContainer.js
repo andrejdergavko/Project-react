@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 import Authorization from "../../components/Authorization/Authorization";
 import Registration from "../../components/Registration/Registration";
 import { loginUser } from "../../store/auth/actions";
+import { fetchCurrenciesRequest } from "../../store/auth/actions";
 
 import "./AuthContainer.scss";
 
@@ -12,7 +13,7 @@ class AuthContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      registrationMode: false
+      registrationMode: true
     };
 
     this.changeRegistrationMode = this.changeRegistrationMode.bind(this);
@@ -27,12 +28,17 @@ class AuthContainer extends Component {
     });
   }
 
+
   render() {
     return (
-      <div className='auth-container'>
+      <div className="auth-container">
         {this.props.authorizedUserId && <Redirect to="/" />}
         {this.state.registrationMode ? (
-          <Registration changeRegistrationMode={this.changeRegistrationMode} />
+          <Registration
+            changeRegistrationMode={this.changeRegistrationMode}
+            currencies={this.props.currencies}
+            fetchCurrenciesRequest={this.props.fetchCurrenciesRequest}
+          />
         ) : (
           <Authorization
             changeRegistrationMode={this.changeRegistrationMode}
@@ -46,12 +52,14 @@ class AuthContainer extends Component {
 
 function mapStateToProps(store) {
   return {
-    authorizedUserId: store.auth.authorizedUserId
+    authorizedUserId: store.auth.authorizedUserId,
+    currencies: store.auth.currencies
   };
 }
 
 const mapDispatchToProps = {
-  loginUser
+  loginUser,
+  fetchCurrenciesRequest
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AuthContainer);

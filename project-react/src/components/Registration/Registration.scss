@@ -1,1 +1,116 @@
 @import "../../style/variables.scss";
+
+.registration {
+  width: 600px;
+  background-color: #fff;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+.registration__preview {
+  position: relative;
+  width: 100%;
+  padding: 90px 90px;
+  background: linear-gradient(
+      rgba(60, 71, 87, 0.808) 20%,
+      rgba(60, 71, 87, 0.808) 60%
+    ),
+    url("https://zozhnik.ru/wp-content/uploads/2016/10/Fresh-Desktop_Imanuel-Pasaka.jpg");
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  color: $text-color;
+}
+
+.registration__header {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.registration__text {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.registration__registration-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 300;
+  transition: 0.1s color;
+}
+
+.registration__registration-button:hover {
+  color: #a6ccfd;
+}
+
+.registration__form {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  padding: 30px 90px 70px;
+}
+
+.registration__label {
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: #777;
+}
+
+.registration__inpyt {
+  grid-column: 2/3;
+  display: block;
+  margin: 10px 0;
+  padding: 10px 3px;
+  border: none;
+  border-bottom: 1px solid rgb(124, 124, 124);
+}
+
+.registration__inpyt::placeholder {
+  color: #bbb;
+}
+
+.registration__select {
+    margin: 20px 0;
+}
+
+.registration__menu-item {
+
+}
+
+.registration__menu-item_placeholder{
+  color: #bbb;
+}
+
+.registration__currency-code {
+  width: 40px;
+  // margin-left: auto;
+}
+
+.registration__submit {
+  grid-column: 2/3;
+  margin-top: 10px;
+  padding: 13px 40px;
+  width: min-content;
+  border: none;
+  background-color: #4677b8;
+  border-radius: 50px;
+  color: $text-color;
+  font-weight: 400;
+  font-size: 17px;
+  transition: 0.2s background-color;
+}
+
+.registration__submit:hover {
+  background-color: #233e61;
+}
+
+.registration__error-block {
+  grid-column: 1/3;
+  color: rgb(245, 37, 37);
+}
