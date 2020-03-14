@@ -9,6 +9,10 @@ body {
   height: 100vh;
 }
 
+input {
+  outline: none;
+}
+
 .content {
   display: grid;
   grid-template-columns: 260px auto;

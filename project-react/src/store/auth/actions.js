@@ -1,11 +1,12 @@
-export const AUTH_ADD_AUTORIZED_USER_ID = "AUTH_ADD_AUTORIZED_USER_ID";
+export const AUTH_ADD_AUTORIZED_USER = "AUTH_ADD_AUTORIZED_USER";
 export const AUTH_ADD_ERROR_MESSAGE = "AUTH_ADD_ERROR_MESSAGE";
 export const AUTH_LOAD_CURRENCIES_SUCCESS = "AUTH_LOAD_CURRENCIES_SUCCESS";
 
 export const addAutorizedUser = (id, email) => ({
-  type: AUTH_ADD_AUTORIZED_USER_ID,
+  type: AUTH_ADD_AUTORIZED_USER,
   payload: {
-    id
+    id,
+    email
   }
 });
 
@@ -23,8 +24,9 @@ export const loadCurrenciesSuccess = currencies => ({
   }
 });
 
-export const saveUserIdToLocalStorage = id => () => {
-  localStorage.setItem("mf-autorized-user-id", id);
+export const saveUserToLocalStorage = user => () => {
+  localStorage.setItem("mf-autorized-user-id", user.id);
+  localStorage.setItem("mf-autorized-user-email", user.email);
 };
 
 export const loginUser = (email, password, isRemembered) => dispatch => {
@@ -35,7 +37,9 @@ export const loginUser = (email, password, isRemembered) => dispatch => {
 
       if (user) {
         if (isRemembered) {
-          dispatch(saveUserIdToLocalStorage(user.id));
+          dispatch(
+            saveUserToLocalStorage({ user: user.id, email: user.email })
+          );
         }
         dispatch(addAutorizedUser(user.id, user.email));
       } else {

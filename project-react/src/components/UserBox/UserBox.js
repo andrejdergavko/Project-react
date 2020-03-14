@@ -1,14 +1,18 @@
-import React from 'react';
-import './UserBox.scss';
+import React from "react";
+import "./UserBox.scss";
 
 function UserBox(props) {
-    return (
-        <div className='user-box'>
-            <div className='user-box__icon'>a</div>
-            <p className='user-box__email'>andrejdergavko</p>
-            
-        </div>
-    );
+  const { authorizedUserEmail: userEmail } = props;
+
+  const email =
+    userEmail.length <= 15 ? userEmail : userEmail.substring(0, 15) + "...";
+    
+  return (
+    <div className="user-box">
+      <div className="user-box__icon">{props.authorizedUserEmail[0]}</div>
+      <p className="user-box__email">{email}</p>
+    </div>
+  );
 }
 
 export default UserBox;

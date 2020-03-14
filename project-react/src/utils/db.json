@@ -1,57 +1,53 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "rExewNCpL2qzJvH0gU0EW",
       "email": "Andrej94@list.ru",
-      "password": "111"
-    },
-    {
-      "id": 2,
-      "email": "Andrej94@list.ru",
-      "password": "222"
-    },
-    {
-      "id": 3,
-      "email": "Andrej94@list.ru",
-      "password": "333"
-    },
-    {
-      "id": "AZXgytHxR_yGLYjz0RqHk",
-      "email": "1Andrej94@list.ru",
       "password": "111111",
-      "currency": "BYN"
-    },
-    {
-      "id": "3eYdfMmihUzc5bx4TFLFo",
-      "email": "2Andrej94@list.ru",
-      "password": "222222",
-      "currency": "BYN"
-    },
-    {
-      "id": "_2kjHZ0xySp1_BLbZ0jN-",
-      "email": "3Andrej94@list.ru",
-      "password": "333333",
       "currency": "RUB"
     },
     {
-      "id": "wm4UyyFWYzsDpt8Oneg0V",
-      "email": "4Andrej94@list.ru",
-      "password": "444444",
-      "currency": "RUB"
-    },
-    {
-      "id": "-jGE05bZCj0QPbuc7-q3B",
-      "email": "5Andrej94@list.ru",
-      "password": "555555",
-      "currency": "RUB"
-    },
-    {
-      "id": "EAXiMmvb5vS_KWflnweDW",
-      "email": "Andreidergavko@gmail.com",
+      "id": "2VfclYKl-rXJed_G75U0i",
+      "email": "andreidergavko@gmail.com",
       "password": "111111",
       "currency": "BYN"
     }
   ],
+
+  "categories": [
+    {
+      "id": 1,
+      "userId": 222,
+      "title": "Дом",
+      "color": "#434",
+      "icon": ""
+    },
+    {
+      "id": 2,
+      "userId": 222,
+      "title": "Дом",
+      "color": "#434",
+      "icon": ""
+    }
+  ],
+
+  "operation":[
+    {
+      "id": 1,
+      "userId": 222,
+      "categoryId": 2,
+      "value": 255,
+      "date": 4156315163163156
+    },
+    {
+      "id": 2,
+      "userId": 222,
+      "categoryId": 2,
+      "value": 255,
+      "date": 4156315163163156
+    }
+  ],
+
   "currencies": [
     {
       "id": 1,

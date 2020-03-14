@@ -1,10 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 import "./Aside.scss";
 
 import UserBox from "../../components/UserBox/UserBox";
-import { connect } from "react-redux";
 
 function Aside(props) {
   return (

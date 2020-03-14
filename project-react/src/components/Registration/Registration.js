@@ -58,6 +58,8 @@ function Registration(props) {
         },
         isRemembered
       );
+    } else {
+      setErrors(['Пользователь с данным email уже существует'])
     }
   }
 

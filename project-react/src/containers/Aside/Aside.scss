@@ -7,8 +7,8 @@
   padding: 0 15px;
   box-sizing: border-box;
   background: linear-gradient(
-      rgba(228, 31, 44, 0.808) 30%,
-      rgba(168, 28, 30, 0.918) 60%
+    rgba(60, 71, 87, 0.808) 20%,
+    rgba(60, 71, 87, 0.808) 60%
     ),
     url("https://demos.creative-tim.com/vue-material-dashboard/img/sidebar-2.32103624.jpg");
   background-size: cover;
@@ -50,6 +50,8 @@
 
 .aside__nav-link:hover {
   background-color: rgba(255, 255, 255, 0.171);
+  color: $text-color;
+  text-decoration: none;
 }
 
 .aside__nav-link_active,
