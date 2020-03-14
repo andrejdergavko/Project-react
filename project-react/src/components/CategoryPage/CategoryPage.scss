@@ -1,0 +1,10 @@
+@import "../../style/variables.scss";
+
+.category-page {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: 5fr 3fr;
+  width: 100%;
+  height: 100%;
+}
