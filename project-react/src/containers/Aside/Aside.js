@@ -4,12 +4,13 @@ import { NavLink } from "react-router-dom";
 import "./Aside.scss";
 
 import UserBox from "../../components/UserBox/UserBox";
+import { connect } from "react-redux";
 
 function Aside(props) {
   return (
     <aside className="aside">
       <div className="aside__box-logo">MonyFy</div>
-      <UserBox />
+      <UserBox authorizedUserEmail={props.authorizedUserEmail} />
       <nav className="aside__nav">
         <ul className="aside__nav-list">
           <li className="aside__nav-item">
@@ -48,4 +49,10 @@ function Aside(props) {
   );
 }
 
-export default Aside;
+function mapStateToProps(store) {
+  return {
+    authorizedUserEmail: store.auth.authorizedUserEmail
+  };
+}
+
+export default connect(mapStateToProps)(Aside);

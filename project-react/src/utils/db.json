@@ -1,42 +1,77 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "email": "Andrej94@list.ru",
-            "password": "111"
-        },
-        {
-            "id": 2,
-            "email": "Andrej94@list.ru",
-            "password": "222"
-        },
-        {
-            "id": 3,
-            "email": "Andrej94@list.ru",
-            "password": "333"
-        }
-    ],
-
-    "currencies": [
-        {
-            "id": 1,
-            "title": "Белорусский рубль",
-            "code": "BYN"
-        },
-        {
-            "id": 2,
-            "title": "Российский рубль",
-            "code": "RUB"
-        },
-        {
-            "id": 3,
-            "title": "Доллар США",
-            "code": "$"
-        },
-        {
-            "id": 4,
-            "title": "Евро",
-            "code": "EUR"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "email": "Andrej94@list.ru",
+      "password": "111"
+    },
+    {
+      "id": 2,
+      "email": "Andrej94@list.ru",
+      "password": "222"
+    },
+    {
+      "id": 3,
+      "email": "Andrej94@list.ru",
+      "password": "333"
+    },
+    {
+      "id": "AZXgytHxR_yGLYjz0RqHk",
+      "email": "1Andrej94@list.ru",
+      "password": "111111",
+      "currency": "BYN"
+    },
+    {
+      "id": "3eYdfMmihUzc5bx4TFLFo",
+      "email": "2Andrej94@list.ru",
+      "password": "222222",
+      "currency": "BYN"
+    },
+    {
+      "id": "_2kjHZ0xySp1_BLbZ0jN-",
+      "email": "3Andrej94@list.ru",
+      "password": "333333",
+      "currency": "RUB"
+    },
+    {
+      "id": "wm4UyyFWYzsDpt8Oneg0V",
+      "email": "4Andrej94@list.ru",
+      "password": "444444",
+      "currency": "RUB"
+    },
+    {
+      "id": "-jGE05bZCj0QPbuc7-q3B",
+      "email": "5Andrej94@list.ru",
+      "password": "555555",
+      "currency": "RUB"
+    },
+    {
+      "id": "EAXiMmvb5vS_KWflnweDW",
+      "email": "Andreidergavko@gmail.com",
+      "password": "111111",
+      "currency": "BYN"
+    }
+  ],
+  "currencies": [
+    {
+      "id": 1,
+      "title": "Белорусский рубль",
+      "code": "BYN"
+    },
+    {
+      "id": 2,
+      "title": "Российский рубль",
+      "code": "RUB"
+    },
+    {
+      "id": 3,
+      "title": "Доллар США",
+      "code": "$"
+    },
+    {
+      "id": 4,
+      "title": "Евро",
+      "code": "EUR"
+    }
+  ]
 }

@@ -1,9 +1,10 @@
 import { AUTH_ADD_AUTORIZED_USER_ID } from "../auth/actions";
 import { AUTH_ADD_ERROR_MESSAGE } from "../auth/actions";
-import { FETCH_CURRENCIES_SUCCESS } from "../auth/actions";
+import { AUTH_LOAD_CURRENCIES_SUCCESS } from "../auth/actions";
 
 const initialState = {
-  authorizedUserId: localStorage.getItem("mf-autorized-user-id")
+  authorizedUserId: localStorage.getItem("mf-autorized-user-id"),
+  authorizedUserEmail: ''
 };
 
 export function authReducer(state = initialState, action) {
@@ -20,7 +21,7 @@ export function authReducer(state = initialState, action) {
         authorizedUserId: action.payload.id
       };
 
-    case FETCH_CURRENCIES_SUCCESS:
+    case AUTH_LOAD_CURRENCIES_SUCCESS:
       return {
         ...state,
         currencies: action.payload.currencies

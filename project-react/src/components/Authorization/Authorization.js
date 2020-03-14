@@ -7,11 +7,26 @@ function Authorization(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isRemembered, setIsRemembered] = useState(false);
+  const [errors, setErrors] = useState([]);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
-    props.loginUser(email, password, isRemembered);
+    const isCorrect = await isPasswordCorrect(email, password);
+
+    if (isCorrect) {
+      props.loginUser(email, password, isRemembered);
+    } else {
+      setErrors(["Неверный логин или пароль"]);
+    }
+  }
+
+  function isPasswordCorrect(email, password) {
+    return fetch(
+      `http://localhost:3001/users?email=${email}&password=${password}`
+    )
+      .then(response => response.json())
+      .then(users => (users[0] ? true : false));
   }
 
   return (
@@ -31,6 +46,15 @@ function Authorization(props) {
       </div>
 
       <form className="authorization__form" onSubmit={handleSubmit}>
+        <div className="authorization__error-block">
+          {errors.map(error => {
+            return (
+              <div key={error} className="authorization__error">
+                {error}
+              </div>
+            );
+          })}
+        </div>
         <label className="authorization__label" htmlFor="email">
           Email
         </label>

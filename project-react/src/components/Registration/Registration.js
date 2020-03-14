@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import nanoid from "nanoid";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
+import Checkbox from "@material-ui/core/Checkbox";
 
 import "./Registration.scss";
 
@@ -11,13 +13,14 @@ function Registration(props) {
   const [password, setPassword] = useState("");
   const [passwordAgain, setPasswordAgain] = useState("");
   const [currency, setCurrency] = useState("");
+  const [isRemembered, setIsRemembered] = useState(false);
   const [errors, setErrors] = useState([]);
 
   useEffect(() => {
-    props.fetchCurrenciesRequest();
+    props.loadCurrencies();
   }, []);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     const errorMessages = validate([
@@ -41,9 +44,27 @@ function Registration(props) {
     } else if (password !== passwordAgain) {
       setErrors(["Введенные пароли не совпадают"]);
       return;
-    } else {
-      console.log("посылаем запрос");
     }
+
+    const isUnique = await isEmailUnique(email);
+
+    if (isUnique) {
+      props.createUser(
+        {
+          id: nanoid(),
+          email,
+          password,
+          currency
+        },
+        isRemembered
+      );
+    }
+  }
+
+  function isEmailUnique(email) {
+    return fetch(`http://localhost:3001/users?email=${email}`)
+      .then(response => response.json())
+      .then(json => json.length === 0);
   }
 
   return (
@@ -134,7 +155,25 @@ function Registration(props) {
             })}
         </Select>
 
-        <input className="registration__submit" type="submit" value="Войти" />
+        <div className="registration__checkbox-wrapper">
+          <Checkbox
+            checked={isRemembered}
+            onChange={event => setIsRemembered(event.target.checked)}
+            value="primary"
+            color="primary"
+            inputProps={{ "aria-label": "primary checkbox" }}
+            name="isRemembered"
+          />
+          <label className="registration__label registration__label_checkbox">
+            Запомнить меня
+          </label>
+        </div>
+
+        <input
+          className="registration__submit"
+          type="submit"
+          value="Сохранить"
+        />
       </form>
     </div>
   );

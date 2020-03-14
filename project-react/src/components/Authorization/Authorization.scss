@@ -105,3 +105,9 @@
 .authorization__submit:hover {
   background-color: #233e61;
 }
+
+.authorization__error-block {
+  grid-column: 1/3;
+  color: rgb(245, 37, 37);
+  font-size: 14px;
+}
