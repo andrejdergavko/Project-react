@@ -34,11 +34,11 @@ export const loginUser = (email, password, isRemembered) => dispatch => {
     .then(response => response.json())
     .then(users => {
       const user = users[0];
-
+console.log(user)
       if (user) {
         if (isRemembered) {
           dispatch(
-            saveUserToLocalStorage({ user: user.id, email: user.email })
+            saveUserToLocalStorage({ id: user.id, email: user.email })
           );
         }
         dispatch(addAutorizedUser(user.id, user.email));

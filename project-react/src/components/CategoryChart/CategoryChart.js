@@ -8,16 +8,16 @@ class CategoryChart extends Component {
   }
 }
 
-function mapStateToProps(store) {
-  return {
+// function mapStateToProps(store) {
+//   return {
     
-  };
-}
+//   };
+// }
 
-function mapDispatchToProps(store) {
-  return {
+// function mapDispatchToProps(store) {
+//   return {
     
-  };
-}
+//   };
+// }
 
 export default connect()(CategoryChart);

@@ -4,7 +4,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import "./Main.scss";
 
-import CategoryPage from "../../components/CategoryPage/CategoryPage";
+import CategoryPage from "../../containers/CategoryPage/CategoryPage";
 
 function Main(props) {
   return (
