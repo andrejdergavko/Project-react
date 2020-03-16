@@ -4,7 +4,7 @@ import "./CategoryChart.scss";
 
 class CategoryChart extends Component {
   render() {
-    return <div className={'info-card'}>CategoryChart</div>;
+    return <div className={'info-card'}></div>;
   }
 }
 

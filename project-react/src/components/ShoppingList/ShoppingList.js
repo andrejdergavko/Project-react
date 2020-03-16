@@ -4,7 +4,7 @@ import "./ShoppingList.scss";
 
 class ShoppingList extends Component {
   render() {
-    return <div className={'info-card'}>ShoppingList</div>;
+    return <div className={'info-card'}></div>;
   }
 }
 

@@ -14,7 +14,7 @@ import { loadUserCategories } from "../../store/app/actions";
 
 class App extends Component {
   componentDidMount() {
-    this.props.loadUserCategories(this.props.authorizedUserId);
+    this.props.loadUserCategories(this.props.authorizedUser.id);
   }
 
   render() {
@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div className="app">
         <Route path="/authorization" component={AuthContainer} />
-        {this.props.authorizedUserId ? (
+        {this.props.authorizedUser ? (
           content
         ) : (
           <Redirect to="/authorization" />
@@ -47,7 +47,7 @@ class App extends Component {
 
 function mapStateToProps(store) {
   return {
-    authorizedUserId: store.auth.authorizedUserId
+    authorizedUser: store.auth.authorizedUser
   };
 }
 

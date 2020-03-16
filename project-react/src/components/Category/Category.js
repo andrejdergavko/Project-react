@@ -1,15 +1,22 @@
-import React from 'react';
-import './Category.scss';
+import React from "react";
+import "./Category.scss";
 
 function Category(props) {
-    const {title, value, color} = props;
-    return (
-        <div className='category'>
-            <div className='category__header'>{title}</div>
-            <div className='category__circle' style={{ backgroundColor:  color}}></div>
-            <div className='category__sum'>{value} RUB</div>
-        </div>
-    );
+  const { title, value, color, currency, onClick } = props;
+  return (
+    <div className="category">
+      <div className="category__header">{title}</div>
+      <div
+        className="category__circle"
+        style={{ backgroundColor: color }}
+        onClick={onClick}
+      ></div>
+      <div className="category__sum">
+        {value}
+        <span className="category__currency">{currency}</span>
+      </div>
+    </div>
+  );
 }
 
 export default Category;

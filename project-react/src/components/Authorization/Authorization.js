@@ -93,7 +93,7 @@ function Authorization(props) {
           </label>
         </div>
 
-        <input className="authorization__submit" type="submit" value="Войти" />
+        <input className="authorization__submit button" type="submit" value="Войти" />
       </form>
     </div>
   );

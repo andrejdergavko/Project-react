@@ -33,7 +33,7 @@ class AuthContainer extends Component {
   render() {
     return (
       <div className="auth-container">
-        {this.props.authorizedUserId && <Redirect to="/" />}
+        {this.props.authorizedUser && <Redirect to="/" />}
         {this.state.registrationMode ? (
           <Registration
             changeRegistrationMode={this.changeRegistrationMode}
@@ -54,7 +54,7 @@ class AuthContainer extends Component {
 
 function mapStateToProps(store) {
   return {
-    authorizedUserId: store.auth.authorizedUserId,
+    authorizedUser: store.auth.authorizedUser,
     currencies: store.auth.currencies
   };
 }

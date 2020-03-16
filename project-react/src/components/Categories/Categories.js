@@ -1,12 +1,14 @@
 import React, { Component } from "react";
+import { Route, withRouter } from "react-router-dom";
 
 import "./Categories.scss";
 
 import Category from "../Category/Category";
+import AddOperationForm from "../AddOperationForm/AddOperationForm";
 
 class Categories extends Component {
   render() {
-    const { categories, operations } = this.props;
+    const { categories, operations, user, history: {push}} = this.props;
 
     const itemsList = categories.map(category => {
       let value = 0;
@@ -22,12 +24,19 @@ class Categories extends Component {
           title={category.title}
           value={value}
           color={category.color}
+          currency={user.currency}
+          onClick={() => push({pathname: `/${category.id}`})}
         />
       );
     });
 
-    return <div className={"categories info-card"}>{itemsList}</div>;
+    return (
+      <div className={"categories info-card"}>
+        {itemsList}
+        <Route path="/:categoryId" render={() => <AddOperationForm categories={categories} />} />
+      </div>
+    );
   }
 }
 
-export default Categories;
+export default withRouter(Categories);

@@ -10,7 +10,7 @@ function Aside(props) {
   return (
     <aside className="aside">
       <div className="aside__box-logo">MonyFy</div>
-      <UserBox authorizedUserEmail={props.authorizedUserEmail} />
+      <UserBox authorizedUserEmail={props.authorizedUser.email} />
       <nav className="aside__nav">
         <ul className="aside__nav-list">
           <li className="aside__nav-item">
@@ -51,7 +51,7 @@ function Aside(props) {
 
 function mapStateToProps(store) {
   return {
-    authorizedUserEmail: store.auth.authorizedUserEmail
+    authorizedUser: store.auth.authorizedUser
   };
 }
 

@@ -9,67 +9,67 @@
   ],
   "defaultCategories": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Продукты",
-      "color": "rgb(136, 208, 226)",
+      "color": "rgb(80, 133, 64)",
       "icon": ""
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Авто",
-      "color": "rgb(136, 149, 226)",
+      "color": "rgb(64, 133, 124)",
       "icon": ""
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Кафе",
-      "color": "rgb(182, 136, 226)",
+      "color": "rgb(64, 102, 133)",
       "icon": ""
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "Досуг",
-      "color": "rgb(226, 136, 196)",
+      "color": "rgb(65, 64, 133)",
       "icon": ""
     },
     {
-      "id": 30,
+      "id": "30",
       "title": "Досуг",
-      "color": "rgb(226, 136, 196)",
+      "color": "rgb(133, 64, 64)",
       "icon": ""
     },
     {
-      "id": 40,
+      "id": "40",
       "title": "Досуг",
-      "color": "rgb(226, 136, 196)",
+      "color": "rgb(120, 133, 64)",
       "icon": ""
     },
     {
-      "id": 50,
+      "id": "50",
       "title": "Досуг",
-      "color": "rgb(226, 136, 196)",
+      "color": "rgb(64, 133, 122)",
       "icon": ""
     },
     {
-      "id": 60,
+      "id": "60",
       "title": "Досуг",
-      "color": "rgb(226, 136, 196)",
+      "color": "rgb(125, 64, 133)",
       "icon": ""
     }
   ],
   "castomCategories": [
     {
-      "id": 3,
+      "id": "3",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
       "title": "Ремонт",
-      "color": "rgb(157, 226, 136)",
+      "color": "rgb(133, 64, 70)",
       "icon": ""
     },
     {
-      "id": 4,
+      "id": "4",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
       "title": "Здоровье",
-      "color": "rgb(226, 199, 136)",
+      "color": "rgb(127, 64, 133)",
       "icon": ""
     }
   ],
@@ -77,30 +77,30 @@
     {
       "id": 1,
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
-      "categoryId": 1,
+      "categoryId": 2,
       "value": 255,
-      "date": 1584265297737
+      "date": 1584356817808
     },
     {
       "id": 2,
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
-      "categoryId": 1,
+      "categoryId": 2,
       "value": 255,
-      "date": 1584265297737
+      "date": 1584356817808
     },
     {
       "id": 3,
       "userId": "111",
-      "categoryId": 3,
+      "categoryId": 2,
       "value": 255,
-      "date": 1584265297737
+      "date": 1584356817808
     },
     {
       "id": 4,
       "userId": "111",
       "categoryId": 4,
       "value": 255,
-      "date": 1584265297737
+      "date": 1584356817808
     }
   ],
   "currencies": [

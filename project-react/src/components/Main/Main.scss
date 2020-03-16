@@ -7,31 +7,5 @@
   box-sizing: border-box;
   background: $bg;
   color: $text-color-black;
-}
-
-.main__transition-group {
-  width: 100%;
-  height: 100%;
-}
-
-.main__transition {
-  height: 100%;
-}
-
-.main__transition-enter {
-  opacity: 0;
-}
-
-.main__transition-enter.main__transition-enter-active {
-  opacity: 1;
-  transition: opacity 300ms ease-in;
-}
-
-.main__transition-exit {
-  opacity: 0;
-}
-
-.main__transition-exit.main__transition-exit-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
+  
 }

@@ -10,17 +10,17 @@ import { loadDailyOperations } from "../../store/categoryPage/actions";
 
 class CategoryPage extends Component {
   componentDidMount() {
-    const { authorizedUserId, loadDailyOperations } = this.props;
+    const { user, loadDailyOperations } = this.props;
 
-    loadDailyOperations(authorizedUserId, Date.now());
+    loadDailyOperations(user.id, Date.now());
   }
 
   render() {
-    const { categories, operations } = this.props;
+    const { categories, operations, user } = this.props;
 
     return (
       <div className={"category-page"}>
-        <Categories categories={categories} operations={operations} />
+        <Categories categories={categories} operations={operations} user={user}/>
         <CategoryChart />
         <ShoppingList />
       </div>
@@ -30,9 +30,9 @@ class CategoryPage extends Component {
 
 function mapStateToProps(store) {
   return {
-    authorizedUserId: store.auth.authorizedUserId,
+    user: store.auth.authorizedUser,
     categories: store.app.categories,
-    operations: store.categoryPage.dailyOperations
+    operations: store.categoryPage.dailyOperations,
   };
 }
 
