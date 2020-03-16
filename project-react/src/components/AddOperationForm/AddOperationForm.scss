@@ -24,6 +24,7 @@
   background-color: rgb(111, 109, 133);
   color: $text-color;
   font-size: 30px;
+  font-weight: 300;
 }
 
 .addOperationForm__form {
@@ -40,7 +41,8 @@
 
 .addOperationForm__input {
   margin: 20px 15px 30px;
-
+  width: 150px;
+  font-size: 30px;
   border: none;
   border-bottom: 1px solid rgb(180, 180, 180);
 }

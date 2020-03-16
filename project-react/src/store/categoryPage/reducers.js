@@ -1,6 +1,7 @@
 import { CATEGORY_PAGE_LOAD_DAILY_OPERATIONS_SUCCESS } from "./actions";
 
 const initialState = {
+  selectedDate: Date.now(),
   dailyOperations: [],
 };
 

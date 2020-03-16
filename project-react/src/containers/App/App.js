@@ -7,7 +7,7 @@ import "../../style/common.scss";
 
 import Main from "../../components/Main/Main";
 import Aside from "../Aside/Aside";
-import Header from "../../components/Header/Header";
+import Header from "../Header/Header";
 import AuthContainer from "../AuthContainer/AuthContainer";
 
 import { loadUserCategories } from "../../store/app/actions";

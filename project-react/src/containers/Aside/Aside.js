@@ -1,12 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 
 import "./Aside.scss";
 
 import UserBox from "../../components/UserBox/UserBox";
 
 function Aside(props) {
+  console.log(props);
   return (
     <aside className="aside">
       <div className="aside__box-logo">MonyFy</div>
@@ -15,6 +16,12 @@ function Aside(props) {
         <ul className="aside__nav-list">
           <li className="aside__nav-item">
             <NavLink
+              isActive={() => {
+                const path = props.location.pathname;
+                if (path.indexOf("add-operation") + 1 || path === "/") {
+                  return true;
+                }
+              }}
               exact
               className="aside__nav-link"
               activeClassName="aside__nav-link_active"
@@ -55,4 +62,4 @@ function mapStateToProps(store) {
   };
 }
 
-export default connect(mapStateToProps)(Aside);
+export default connect(mapStateToProps)(withRouter(Aside));
