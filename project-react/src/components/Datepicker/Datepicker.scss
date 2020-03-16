@@ -1,5 +1,15 @@
 @import "../../style/variables.scss";
 
 .datepicker {
-    display: inline-block;
+  display: inline-block;
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.datepicker__label {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: 300;
 }
