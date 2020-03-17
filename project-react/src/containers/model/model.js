@@ -14,10 +14,8 @@ function mapStateToProps(store) {
   };
 }
 
-function mapDispatchToProps(store) {
-  return {
-    
-  };
-}
+const mapDispatchToProps = {
+  
+};
 
 export default connect()(model);

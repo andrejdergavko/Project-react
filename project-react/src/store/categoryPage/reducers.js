@@ -1,8 +1,9 @@
 import { CATEGORY_PAGE_LOAD_DAILY_OPERATIONS_SUCCESS } from "./actions";
+import { CATEGORY_PAGE_SET_SELECTED_DATE } from "./actions";
 
 const initialState = {
   selectedDate: Date.now(),
-  dailyOperations: [],
+  dailyOperations: []
 };
 
 export function categoryPageReducer(state = initialState, action) {
@@ -11,6 +12,11 @@ export function categoryPageReducer(state = initialState, action) {
       return {
         ...state,
         dailyOperations: action.payload.operations
+      };
+    case CATEGORY_PAGE_SET_SELECTED_DATE:
+      return {
+        ...state,
+        selectedDate: action.payload.date
       };
     default:
       return state;

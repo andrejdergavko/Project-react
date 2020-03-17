@@ -14,11 +14,13 @@ const defaultMaterialTheme = createMuiTheme({
   }
 });
 
-function Datepicker(props) {
+function Datepicker({ userId, loadDailyOperations }) {
   const [date, setDate] = useState(new Date());
-  useEffect(()=>{
 
-  }, [date])
+  const handleChange = value => {
+    setDate(value);
+    loadDailyOperations(userId, value.getTime());
+  };
 
   return (
     <div className="datepicker">
@@ -34,7 +36,7 @@ function Datepicker(props) {
             variant="inline"
             format="dd.MM.yyyy"
             value={date}
-            onChange={setDate}
+            onChange={handleChange}
           />
         </ThemeProvider>
       </MuiPickersUtilsProvider>

@@ -6,7 +6,8 @@ import "./Header.scss";
 
 import PageName from "../../components/PageName/PageName";
 import Datepicker from "../../components/Datepicker/Datepicker";
-import {loadDailyOperations} from '../../store/categoryPage/actions';
+import { loadDailyOperations } from "../../store/categoryPage/actions";
+import { deleteUserFromLocalStorage } from "../../store/auth/actions";
 
 class Header extends Component {
   render() {
@@ -15,23 +16,39 @@ class Header extends Component {
         <PageName />
         <Switch>
           <Route
-          exact
+            exact
             path={["/", "/add-operation/:categoryId"]}
-            render={() => <Datepicker loadDailyOperations={this.props.loadDailyOperations}/>}
+            render={() => (
+              <Datepicker
+                loadDailyOperations={this.props.loadDailyOperations}
+                userId={this.props.userId}
+              />
+            )}
           />
         </Switch>
-        <button className='header__exit-button'>Выход</button>
+        <button
+          className="header__exit-button"
+          onClick={() => {
+            this.props.deleteUserFromLocalStorage();
+            window.location.reload();
+          }}
+        >
+          Выход
+        </button>
       </div>
     );
   }
 }
 
 function mapStateToProps(store) {
-  return {};
+  return {
+    userId: store.auth.authorizedUser.id
+  };
 }
 
 const mapDispatchToProps = {
-  loadDailyOperations
-}
+  loadDailyOperations,
+  deleteUserFromLocalStorage
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

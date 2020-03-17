@@ -25,7 +25,10 @@ export const loadCurrenciesSuccess = currencies => ({
 
 export const saveUserToLocalStorage = user => () => {
   localStorage.setItem("mf-autorized-user", JSON.stringify(user));
-  
+};
+
+export const deleteUserFromLocalStorage = () => () => {
+  localStorage.removeItem("mf-autorized-user");
 };
 
 export const loginUser = (email, password, isRemembered) => dispatch => {

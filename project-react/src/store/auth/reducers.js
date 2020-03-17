@@ -1,5 +1,4 @@
 import { AUTH_ADD_AUTORIZED_USER } from "../auth/actions";
-import { AUTH_ADD_ERROR_MESSAGE } from "../auth/actions";
 import { AUTH_LOAD_CURRENCIES_SUCCESS } from "../auth/actions";
 
 const initialState = {
