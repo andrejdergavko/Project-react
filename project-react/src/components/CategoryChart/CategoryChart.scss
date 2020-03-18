@@ -1,3 +1,21 @@
 .categoryChart {
-    
+  position: relative;
+}
+
+.categoryChart__sum-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.categoryChart__sum {
+  display: inline-block;
+  font-size: 35px;
+}
+
+.categoryChart__currency {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 19px;
 }

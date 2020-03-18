@@ -12,7 +12,6 @@ import {
 } from "../../store/categoryPage/actions";
 
 class CategoryPage extends Component {
-  
   componentDidMount() {
     const { user, loadDailyOperations, selectedDate } = this.props;
 
@@ -20,7 +19,30 @@ class CategoryPage extends Component {
   }
 
   render() {
-    const { categories, operations, user, setOperation, selectedDate } = this.props;
+    const {
+      categories,
+      operations,
+      user,
+      setOperation,
+      selectedDate
+    } = this.props;
+
+    const operationsList = categories.map(category => {
+      let value = 0;
+
+      operations.forEach(operation => {
+        if (category.id === operation.categoryId) {
+          value = value + operation.value;
+        }
+      });
+      return {
+        categoryId: category.id,
+        title: category.title,
+        color: category.color,
+        icon: category.icon,
+        value: value
+      };
+    });
 
     return (
       <div className={"category-page"}>
@@ -31,8 +53,12 @@ class CategoryPage extends Component {
           setOperation={setOperation}
           selectedDate={selectedDate}
         />
-        <CategoryChart />
-        <ShoppingList />
+        <CategoryChart
+          categories={categories}
+          operations={operations}
+          currency={user.currency}
+        />
+        <ShoppingList operationsList={operationsList} />
       </div>
     );
   }

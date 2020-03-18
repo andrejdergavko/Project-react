@@ -28,12 +28,12 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev-server": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "json-server": "json-server --watch src/utils/db.json --port 3001",
-    "startall": "concurrently --kill-others \"react-scripts start\" \"json-server --watch src/utils/db.json --port 3001 --delay 100"
+    "start": "concurrently --kill-others \"react-scripts start\" \"json-server --watch src/utils/db.json --port 3001 --delay 100"
   },
   "eslintConfig": {
     "extends": "react-app"
