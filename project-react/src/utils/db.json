@@ -5,6 +5,12 @@
       "email": "Andrej94@list.ru",
       "password": "111111",
       "currency": "BYN"
+    },
+    {
+      "id": "5bQYl1w0_GOPpQlbdltMi",
+      "email": "2Andrej94@list.ru",
+      "password": "222222",
+      "currency": "$"
     }
   ],
   "defaultCategories": [
@@ -185,18 +191,18 @@
       "date": 1584622274663
     },
     {
-      "id": "IfKv2uUJbV4ksJu3bkGp7",
+      "id": "jfZFqHntvuVQzbXHfBxFF",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
-      "categoryId": "50",
-      "value": 25,
-      "date": 1584623125939
+      "categoryId": "100",
+      "value": 555,
+      "date": 1584626864456
     },
     {
-      "id": "7efdAZbhVufgfwb5r8Urk",
-      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "id": "BpBnEZ3H57xR7stqLzNUV",
+      "userId": "5bQYl1w0_GOPpQlbdltMi",
       "categoryId": "10",
-      "value": 11,
-      "date": 1584626036365
+      "value": 44,
+      "date": 1584636780000
     }
   ],
   "currencies": [

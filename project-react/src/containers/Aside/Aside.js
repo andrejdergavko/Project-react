@@ -35,17 +35,7 @@ function Aside(props) {
             <NavLink
               className="aside__nav-link"
               activeClassName="aside__nav-link_active"
-              to="/operations"
-            >
-              Операции
-            </NavLink>
-          </li>
-
-          <li className="aside__nav-item">
-            <NavLink
-              className="aside__nav-link"
-              activeClassName="aside__nav-link_active"
-              to="/overview"
+              to="/statistics"
             >
               Обзор
             </NavLink>

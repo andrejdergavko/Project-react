@@ -34,7 +34,7 @@ function ShoppingRow({
         <span className="shoppingRow__currency">{currency}</span>
       </td>
       <td>
-        <button onClick={deleteOperation}>x</button>
+        <button className="shoppingRow__delete-button" onClick={deleteOperation}>&#215;</button>
       </td>
     </tr>
   );

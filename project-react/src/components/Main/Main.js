@@ -4,13 +4,13 @@ import { Route, Switch, withRouter } from "react-router-dom";
 import "./Main.scss";
 
 import CategoryPage from "../../containers/CategoryPage/CategoryPage";
+import StatisticsPage from "../../containers/StatisticsPage/StatisticsPage";
 
 function Main(props) {
   return (
     <div className="main">
       <Switch>
-        <Route path="/operations" render={() => <p>Operations</p>} />
-        <Route path="/overview" render={() => <p>Overview</p>} />
+        <Route path="/statistics" component={StatisticsPage} />
         <Route path="/" component={CategoryPage} />
       </Switch>
     </div>
