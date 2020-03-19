@@ -5,7 +5,7 @@ import "chartjs-plugin-datalabels";
 import "./CategoryChart.scss";
 
 function CategoryChart(props) {
-  const { categories, operations, currency } = props;
+  const { currency, operationsList } = props;
 
   const defaultData = {
     labels: [""],
@@ -27,19 +27,11 @@ function CategoryChart(props) {
     ]
   };
 
-  categories.forEach(category => {
-    const value = operations.reduce((sum, operation) => {
-      if (operation.categoryId === category.id) {
-        return sum + operation.value;
-      } else {
-        return sum;
-      }
-    }, 0);
-
-    if (value) {
-      data.labels.push(category.title);
-      data.datasets[0].backgroundColor.push(category.color);
-      data.datasets[0].data.push(value);
+  operationsList.forEach(operation => {
+    if (operation.value) {
+      data.labels.push(operation.title);
+      data.datasets[0].backgroundColor.push(operation.color);
+      data.datasets[0].data.push(operation.value);
     }
   });
 
@@ -75,7 +67,9 @@ function CategoryChart(props) {
         padding: 10,
         font: {
           weight: "normal",
-          size: "17"
+          size: "17",
+          family: "Montserrat",
+          weight: "400"
         },
         formatter: function(value, context) {
           const density = context.dataset.data.reduce((sum, item) => {
@@ -91,6 +85,7 @@ function CategoryChart(props) {
   return (
     <div className="categoryChart info-card">
       <div className="categoryChart__sum-box">
+        <div className="categoryChart__label">Всего</div>
         <div className="categoryChart__sum">
           {data.datasets[0].data.reduce((sum, item) => {
             return sum + item;

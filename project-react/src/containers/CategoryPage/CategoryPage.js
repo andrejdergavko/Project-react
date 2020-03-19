@@ -4,17 +4,33 @@ import "./CategoryPage.scss";
 
 import Categories from "../../components/Categories/Categories";
 import CategoryChart from "../../components/CategoryChart/CategoryChart";
-import ShoppingList from "../../components/ShoppingList/ShoppingList";
+import ShoppingList from "../../components/ShoppingTable/ShoppingTable";
 
 import {
   loadDailyOperations,
-  setOperation
+  setOperation,
+  deleteOperation
 } from "../../store/categoryPage/actions";
 
 class CategoryPage extends Component {
-  componentDidMount() {
-    const { user, loadDailyOperations, selectedDate } = this.props;
+  constructor(props) {
+    super(props);
 
+    this.refreshOperations = this.refreshOperations.bind(this);
+  }
+
+  componentDidMount() {
+    this.refreshOperations();
+  }
+
+  componentDidUpdate() {
+    if (!this.props.isRelevant) {
+      this.refreshOperations();
+    }
+  }
+
+  refreshOperations() {
+    const { user, loadDailyOperations, selectedDate } = this.props;
     loadDailyOperations(user.id, selectedDate);
   }
 
@@ -24,7 +40,8 @@ class CategoryPage extends Component {
       operations,
       user,
       setOperation,
-      selectedDate
+      selectedDate,
+      deleteOperation
     } = this.props;
 
     const operationsList = categories.map(category => {
@@ -48,17 +65,21 @@ class CategoryPage extends Component {
       <div className={"category-page"}>
         <Categories
           categories={categories}
-          operations={operations}
           user={user}
           setOperation={setOperation}
           selectedDate={selectedDate}
+          operationsList={operationsList}
         />
         <CategoryChart
+          currency={user.currency}
+          operationsList={operationsList}
+        />
+        <ShoppingList
           categories={categories}
           operations={operations}
           currency={user.currency}
+          deleteOperation={deleteOperation}
         />
-        <ShoppingList operationsList={operationsList} />
       </div>
     );
   }
@@ -69,13 +90,15 @@ function mapStateToProps(store) {
     user: store.auth.authorizedUser,
     categories: store.app.categories,
     operations: store.categoryPage.dailyOperations,
-    selectedDate: store.categoryPage.selectedDate
+    selectedDate: store.categoryPage.selectedDate,
+    isRelevant: store.categoryPage.isRelevant
   };
 }
 
 const mapDispatchToProps = {
   loadDailyOperations,
-  setOperation
+  setOperation,
+  deleteOperation
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CategoryPage);

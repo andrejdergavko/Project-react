@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, withRouter } from "react-router-dom";
-import nanoid from 'nanoid';
+import nanoid from "nanoid";
 
 import "./Categories.scss";
 
@@ -14,43 +14,37 @@ class Categories extends Component {
   }
 
   addOperation = (sum, categoryId) => {
-    const {setOperation, user, history: { push }, selectedDate} = this.props
-
-    setOperation({
+    this.props.setOperation({
       id: nanoid(),
-      userId: user.id,
+      userId: this.props.user.id,
       categoryId: categoryId,
       value: sum,
-      date: selectedDate
-    })
+      date: this.props.selectedDate
+    });
 
-    push('/')
+    this.props.history.push("/");
   };
 
   render() {
     const {
       categories,
-      operations,
       user,
+      operationsList,
       history: { push }
     } = this.props;
 
-    const categoriesList = categories.map(category => {
-      let value = 0;
-
-      operations.forEach(operation => {
-        if (category.id === operation.categoryId) {
-          value = value + operation.value;
-        }
-      });
+    const categoriesList = operationsList.map(operation => {
       return (
         <Category
-          key={category.id}
-          title={category.title}
-          value={value}
-          color={category.color}
+          key={operation.categoryId}
+          icon={operation.icon}
+          title={operation.title}
+          value={operation.value}
+          color={operation.color}
           currency={user.currency}
-          onClick={() => push({ pathname: `/add-operation/${category.id}` })}
+          onClick={() =>
+            push({ pathname: `/add-operation/${operation.categoryId}` })
+          }
         />
       );
     });

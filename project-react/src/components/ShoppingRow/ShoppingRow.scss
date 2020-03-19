@@ -1,0 +1,19 @@
+@import "../../style/variables.scss";
+
+.shoppingRow__circle-col {
+    text-align: center;
+}
+
+.shoppingRow__circle {
+  display: inline-block;
+    margin: 0 auto;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: rgb(158, 158, 158);
+}
+
+.shoppingRow__currency {
+  margin-left: 5px;
+  font-size: 10px;
+}

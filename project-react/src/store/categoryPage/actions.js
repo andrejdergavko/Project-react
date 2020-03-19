@@ -4,6 +4,9 @@ export const CATEGORY_PAGE_LOAD_DAILY_OPERATIONS_SUCCESS =
 export const CATEGORY_PAGE_SET_SELECTED_DATE =
   "CATEGORY_PAGE_SET_SELECTED_DATE";
 
+export const CATEGORY_PAGE_CHANGE_DATA_RELEVANCE =
+  "CATEGORY_PAGE_CHANGE_DATA_RELEVANCE";
+
 export const loadDailyOperationsSuccess = operations => ({
   type: CATEGORY_PAGE_LOAD_DAILY_OPERATIONS_SUCCESS,
   payload: {
@@ -18,6 +21,13 @@ export const setSelectedDate = date => ({
   }
 });
 
+export const changeDataRelevance = isRelevant => ({
+  type: CATEGORY_PAGE_CHANGE_DATA_RELEVANCE,
+  payload: {
+    isRelevant
+  }
+});
+
 export const loadDailyOperations = (id, date) => dispatch => {
   const startOfTheDay = new Date(date).setHours(0, 0, 0, 0);
   const endOfTheDay = startOfTheDay + 86400000;
@@ -29,7 +39,8 @@ export const loadDailyOperations = (id, date) => dispatch => {
     .then(json => {
       dispatch(loadDailyOperationsSuccess(json));
     })
-    .then(() => dispatch(setSelectedDate(date)));
+    .then(() => dispatch(setSelectedDate(date)))
+    .then(() => dispatch(changeDataRelevance(true)));
 };
 
 export const setOperation = operation => dispatch => {
@@ -39,7 +50,11 @@ export const setOperation = operation => dispatch => {
       "Content-Type": "application/json; charset=utf-8"
     },
     body: JSON.stringify(operation)
-  }).then(() =>
-    dispatch(loadDailyOperations(operation.userId, operation.date))
-  );
+  }).then(() => dispatch(changeDataRelevance(false)));
+};
+
+export const deleteOperation = id => dispatch => {
+  fetch(`http://localhost:3001/operations/${id}`, {
+    method: "DELETE"
+  }).then(() => dispatch(changeDataRelevance(false)));
 };

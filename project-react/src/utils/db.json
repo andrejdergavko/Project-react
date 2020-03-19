@@ -11,49 +11,61 @@
     {
       "id": "1",
       "title": "Продукты",
-      "color": "rgb(80, 133, 64)",
-      "icon": ""
+      "color": "#64cc95",
+      "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAACOUlEQVRoge3aMWgUQRTG8blLoiBBkCiIYkDsLNJEAoKF2qSyNWApIa2VpEhpY5dS0tqksrNQUUGiIVhoSsFCCxEVQUTBmGh+Fpngene57F32djdx/3DNzLz3vm9ndu5muBAqtgfDeIyHGC5aT1fgPD74y2eMF60rNahhBr+igbvxI7bNoFa0zrbgIO5E0eu4iXo0N91g7lDReluCEbxut4wwHvvEsSMN/c80s5CniSv4Hgu/wMk2Y09gKY79gauJvpbkYaA/Lp9NbuNAirj9mEvEzWFfo/BcjOA4FhNPdrKLHJMxViJXfkZwAR9jnbc4s4NcozFH01LqmREbu891rMUa9zGUQd4h3Is5VxLt2RvRvLXeQF+G+eu4hsuJtmyN4DRexbxfcCmz5O3rZmcEE/gWcy7jVCaJ09X+HetO7CTJAGYT72CqrTVLcCtRfxYDnSY4gkcxwRqme6Q1jZYp/IxaFnAsbeA5vI+B73C2x1rTaBrFm6jpEy5uFzCF1RjwBEdz0rotOIwHyVWi8Vc0BjHvX/oL0rwl6GvQOI/B5IDnsePr5ogC9bYlYWJT62IIIdRj/2oIYTmEMFaYws4ZCyG8DCGstOzdLTPS2F5vNXg3UhkpG3vGSGbfFd1uELVaLZOroWpGtiLtE856i98zM1IZKRuVkbJRGekUGzftPbtZz3NG1kMI+R0Puj2PdBqXdZ3qHSkblZGyURkpG3vGSNMhqMx3WkkaD3CtZuRpTlp2Qn5/Iqj43/kDiFRCmr8BgrcAAAAASUVORK5CYII="
     },
     {
       "id": "2",
       "title": "Авто",
-      "color": "rgb(64, 133, 124)",
-      "icon": ""
+      "color": "#64abcc",
+      "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAADeElEQVRoge2YP2wURxjF3xzINsIoRBQuDCgWOFFIQwGCxAIhCpISEVkgIUGUIhGmcepQ8s8lNVQpkAj/hLApQAgH00Q0gOgQGCGMUAhg41gKwvCj2G9147u9vZu7XZtin3Ta3Zn53nvfzTe7sysVKFCgQIECzcO1EgwskrRJUp+kXkmr7dcu6XMbFh9fe8e3kp7Y74GkW5L+ds59aMVPMIAvgRPAM7LDc+AksLEZT0EzAiyRNCTpoKSSNY9L+kvSHUmP7fo/SdOSZiVN2rjlkhZLWiapU1KPpC8krZe0zc5jnJZ0wDn3JiibBpNwwCX792aBM8DWDPm3AH8A70zjJlCqHxkutN8EXgHfZS5Q1tkAvDStPXkI3DbynzInr9Y6aFqjWRNvNOJ/gI5MyZP1PgNmTPPrRmIarcFf7HjKOfd/c/Yah3NuStKfdvlzJqTAEmAS+ACsyYS0Md0+m5EXQHsWhPuM8HoG/kK175t2fxZkN4xsbwbeQrUHTftaSNAPwCgwnfDUfQt05ui5lqcVpl2JafP6fWXAj8D7hIAYw/OdhOftSoqv98AuqXzXOmTnhyV1OeecpDZJL6z/8Xwn4GHc87DIvHUp8lpS5D2CV049XttOL/NJYABYCyzN2zmw1LQGTDvGDm9MT1xmfuBoyvQ9TOmbL6R5GPUT6QVGqF7os0A30Rq6CDyi/MTNEzOmddG0u82Lj2lgGFibNrW/2eCRfIonHJQX/WBI0F0L6gfagCGSX6LeAOeB3hYMrgTOGlclJoBj5qHf2u6GkMdoB47XqwOibXd3E0l8RXnLnoaj5gWA4ETsfMIuq95BiGp32PrPNJHIBYu9nPRHUN5vTVT6aiaRuKTW1Ri7yvonk/rr6MTllDibwDeNJtLINv6cHceA3aFm6yA2VfXtwLRuVngIZJ87I8uAa169jgHbgQ6ihTpi7Web0DlvscPG1WHcY57eVWyf11Jp2XUJ+JXok00SXpJ2P6+t0wv8W4PzuWmWvPGtJeK1dwK/A/eIHlpTRLfO4CQ8zm6iLzJTxnnPNKp225klstBI85W62IHN+VgKB/BtWn/il8ZPcTZ82FZ+Durdfl/l5KUZhHupt0byWkOt6NaakWcW2JdAFrdNhBptANnqEu046+FINt5z1CXaNh+jvGH08RQ4ArTlkMiC6BYoUKBAgQIfAeWK1stCUVKzAAAAAElFTkSuQmCC"
     },
     {
       "id": "10",
       "title": "Кафе",
-      "color": "rgb(64, 102, 133)",
+      "color": "#646ecc",
       "icon": ""
     },
     {
       "id": "20",
       "title": "Досуг",
-      "color": "rgb(65, 64, 133)",
+      "color": "#cc64a1",
       "icon": ""
     },
     {
       "id": "30",
-      "title": "Досуг",
+      "title": "Транспорт",
       "color": "rgb(133, 64, 64)",
       "icon": ""
     },
     {
+      "id": "100",
+      "title": "Кафе",
+      "color": "#646ecc",
+      "icon": ""
+    },
+    {
       "id": "40",
-      "title": "Досуг",
-      "color": "rgb(120, 133, 64)",
+      "title": "Подарки",
+      "color": "#cc6464",
       "icon": ""
     },
     {
       "id": "50",
-      "title": "Досуг",
-      "color": "rgb(64, 133, 122)",
+      "title": "Семья",
+      "color": "#64cc75",
+      "icon": ""
+    },
+    {
+      "id": "101",
+      "title": "Кафе",
+      "color": "#646ecc",
       "icon": ""
     },
     {
       "id": "60",
-      "title": "Досуг",
-      "color": "rgb(125, 64, 133)",
+      "title": "Покупки",
+      "color": "#8c64cc",
       "icon": ""
     }
   ],
@@ -62,14 +74,14 @@
       "id": "3",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
       "title": "Ремонт",
-      "color": "rgb(133, 64, 70)",
+      "color": "#cc6469",
       "icon": ""
     },
     {
       "id": "4",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
       "title": "Здоровье",
-      "color": "rgb(127, 64, 133)",
+      "color": "#cc9f64",
       "icon": ""
     }
   ],
@@ -82,13 +94,6 @@
       "date": 1584532787349
     },
     {
-      "id": "ddNvXQs_XW5uaTAVQLlm7",
-      "userId": "MhC2IaK1D2D0CqvVUyQSw",
-      "categoryId": "2",
-      "value": 25,
-      "date": 1584532956512
-    },
-    {
       "id": "kpM3Z4ORaImjUiZvfiqZ5",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
       "categoryId": "2",
@@ -96,18 +101,102 @@
       "date": 1584446520000
     },
     {
-      "id": "ksZGRDGen6ZWcUz0veMWK",
-      "userId": "MhC2IaK1D2D0CqvVUyQSw",
-      "categoryId": "10",
-      "value": 20.5,
-      "date": 1584535255561
-    },
-    {
       "id": "EWwBHW8limnAUuCfTiBCD",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
       "categoryId": "20",
       "value": 15,
       "date": 1584535639555
+    },
+    {
+      "id": "Pnc64-amvD52eZ9Oko5X0",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "60",
+      "value": 2,
+      "date": 1584539040000
+    },
+    {
+      "id": "KTHlAoGOdPihWYxptjbQ3",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "30",
+      "value": 25,
+      "date": 1584561993906
+    },
+    {
+      "id": "LZu-JN-w3a4e5rcUXrNj4",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "40",
+      "value": 55,
+      "date": 1584561993906
+    },
+    {
+      "id": "olBNh2rFjauXyoixqyxnZ",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "10",
+      "value": 25,
+      "date": 1584475620000
+    },
+    {
+      "id": "rf_dLYQBGBbnG8rO5bFg7",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "10",
+      "value": 25,
+      "date": 1584389280000
+    },
+    {
+      "id": "lKRT8KGe4J9XksGLCTj-H",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "40",
+      "value": 50,
+      "date": 1584389280000
+    },
+    {
+      "id": "qryLWVYRhD1mAQuIbSgf2",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "1",
+      "value": 25,
+      "date": 1584476700000
+    },
+    {
+      "id": "NS_SKuHXDdkxUZa6MLYvk",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "50",
+      "value": 25,
+      "date": 1584563725133
+    },
+    {
+      "id": "LshwJOW_Swpn7pKHt79kV",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "50",
+      "value": 25,
+      "date": 1584509280000
+    },
+    {
+      "id": "MxrCUxHGrnS5tBU6oioz3",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "60",
+      "value": 58,
+      "date": 1584509280000
+    },
+    {
+      "id": "TFi3j-jNz1-Gehr6Q-ISS",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "40",
+      "value": 25,
+      "date": 1584622274663
+    },
+    {
+      "id": "IfKv2uUJbV4ksJu3bkGp7",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "50",
+      "value": 25,
+      "date": 1584623125939
+    },
+    {
+      "id": "7efdAZbhVufgfwb5r8Urk",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "10",
+      "value": 11,
+      "date": 1584626036365
     }
   ],
   "currencies": [

@@ -2,9 +2,14 @@
   position: relative;
 }
 
+.categoryChart__label {
+  display: block;
+  text-align: center;
+}
+
 .categoryChart__sum-box {
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -12,6 +17,7 @@
 .categoryChart__sum {
   display: inline-block;
   font-size: 35px;
+  font-weight: 400;
 }
 
 .categoryChart__currency {

@@ -1,0 +1,13 @@
+.shoppingTable {
+  display: flex;
+  flex-direction: column;
+}
+
+.shoppingTable__wrapper {
+    flex-grow: 1;
+  flex-basis: 200px;
+  overflow-y: auto;
+}
+
+.shoppingTable__table {
+}
