@@ -1,3 +1,5 @@
+import Api from "../../utils/api";
+
 export const CATEGORY_PAGE_LOAD_DAILY_OPERATIONS_SUCCESS =
   "CATEGORY_PAGE_LOAD_DAILY_OPERATIONS_SUCCESS";
 
@@ -32,9 +34,7 @@ export const loadDailyOperations = (id, date) => dispatch => {
   const startOfTheDay = new Date(date).setHours(0, 0, 0, 0);
   const endOfTheDay = startOfTheDay + 86400000;
 
-  fetch(
-    `http://localhost:3001/operations?date_gte=${startOfTheDay}&date_lte=${endOfTheDay}&userId=${id}`
-  )
+  Api.loadOperations(startOfTheDay, endOfTheDay, id)
     .then(response => response.json())
     .then(json => {
       dispatch(loadDailyOperationsSuccess(json));
@@ -44,17 +44,9 @@ export const loadDailyOperations = (id, date) => dispatch => {
 };
 
 export const setOperation = operation => dispatch => {
-  fetch("http://localhost:3001/operations", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json; charset=utf-8"
-    },
-    body: JSON.stringify(operation)
-  }).then(() => dispatch(changeDataRelevance(false)));
+  Api.setOperation(operation).then(() => dispatch(changeDataRelevance(false)));
 };
 
 export const deleteOperation = id => dispatch => {
-  fetch(`http://localhost:3001/operations/${id}`, {
-    method: "DELETE"
-  }).then(() => dispatch(changeDataRelevance(false)));
+  Api.deleteOperation(id).then(() => dispatch(changeDataRelevance(false)));
 };

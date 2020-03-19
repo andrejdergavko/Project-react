@@ -11,6 +11,12 @@
       "email": "2Andrej94@list.ru",
       "password": "222222",
       "currency": "$"
+    },
+    {
+      "id": "ddlIZGXjB5uvU-POYlela",
+      "email": "3Andrej94@list.ru",
+      "password": "333333",
+      "currency": "RUB"
     }
   ],
   "defaultCategories": [
@@ -196,6 +202,13 @@
       "categoryId": "10",
       "value": 44,
       "date": 1584636780000
+    },
+    {
+      "id": "jcgMFWDWX69A0KF707IjE",
+      "userId": "ddlIZGXjB5uvU-POYlela",
+      "categoryId": "10",
+      "value": 3,
+      "date": 1584644604277
     }
   ],
   "currencies": [
