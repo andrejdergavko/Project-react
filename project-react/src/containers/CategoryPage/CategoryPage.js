@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./CategoryPage.scss";
 
-import Categories from "../../components/Categories/Categories";
-import CategoryChart from "../../components/CategoryChart/CategoryChart";
-import ShoppingList from "../../components/ShoppingTable/ShoppingTable";
+import Categories from "../../components/categoryPage/Categories/Categories";
+import CategoryChart from "../../components/categoryPage/CategoryChart/CategoryChart";
+import ShoppingList from "../../components/categoryPage/ShoppingTable/ShoppingTable";
 
 import {
   loadDailyOperations,

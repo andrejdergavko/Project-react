@@ -3,8 +3,8 @@ import { Route, Switch, withRouter } from "react-router-dom";
 
 import "./Main.scss";
 
-import CategoryPage from "../../containers/CategoryPage/CategoryPage";
-import StatisticsPage from "../../containers/StatisticsPage/StatisticsPage";
+import CategoryPage from "../../../containers/CategoryPage/CategoryPage";
+import StatisticsPage from "../../../containers/StatisticsPage/StatisticsPage";
 
 function Main(props) {
   return (

@@ -4,7 +4,7 @@ import { NavLink, withRouter } from "react-router-dom";
 
 import "./Aside.scss";
 
-import UserBox from "../../components/UserBox/UserBox";
+import UserBox from "../../components/app/UserBox/UserBox";
 
 function Aside(props) {
   console.log(props);

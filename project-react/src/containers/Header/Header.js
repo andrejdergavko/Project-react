@@ -4,8 +4,8 @@ import { Route, Switch } from "react-router-dom";
 
 import "./Header.scss";
 
-import PageName from "../../components/PageName/PageName";
-import Datepicker from "../../components/Datepicker/Datepicker";
+import PageName from "../../components/app/PageName/PageName";
+import Datepicker from "../../components/categoryPage/Datepicker/Datepicker";
 import { loadDailyOperations } from "../../store/categoryPage/actions";
 import { deleteUserFromLocalStorage } from "../../store/auth/actions";
 

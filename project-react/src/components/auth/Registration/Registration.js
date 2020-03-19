@@ -6,7 +6,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 
 import "./Registration.scss";
 
-import { validate } from "../../utils/validation/registrationValidation";
+import { validate } from "../../../utils/validation/registrationValidation";
 
 function Registration(props) {
   const [email, setEmail] = useState("");

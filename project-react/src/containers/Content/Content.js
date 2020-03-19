@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./Content.scss";
 
-import Main from "../../components/Main/Main";
+import Main from "../../components/app/Main/Main";
 import Aside from "../Aside/Aside";
 import Header from "../Header/Header";
 

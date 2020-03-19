@@ -4,8 +4,8 @@ import { Redirect } from "react-router-dom";
 // import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 
-import Authorization from "../../components/Authorization/Authorization";
-import Registration from "../../components/Registration/Registration";
+import Authorization from "../../components/auth/Authorization/Authorization";
+import Registration from "../../components/auth/Registration/Registration";
 import { loginUser, createUser, loadCurrencies } from "../../store/auth/actions";
 
 import "./AuthContainer.scss";
