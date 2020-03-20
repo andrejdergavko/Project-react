@@ -3,7 +3,7 @@ import './StatChart.scss';
 
 function StatChart(props) {
     return (
-        <div>
+        <div className='statChart info-card'>
             
         </div>
     );

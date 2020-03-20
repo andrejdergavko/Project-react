@@ -1,1 +1,28 @@
 @import "../../../style/variables.scss";
+
+.dateBox {
+  grid-row: 1/2;
+}
+
+.dateBox__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 25px;
+}
+
+.dateBox__label {
+  padding: 0 20px 0 0;
+}
+
+.dateBox__pickers {
+  display: inline-block;
+  grid-column: 1/4;
+  box-sizing: border-box;
+}
+
+.dateBox__picker-wrapper {
+  display: inline-block;
+  width: 100px;
+  margin-right: 20px;
+}

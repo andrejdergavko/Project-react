@@ -59,7 +59,7 @@ function Registration(props) {
         isRemembered
       );
     } else {
-      setErrors(['Пользователь с данным email уже существует'])
+      setErrors(["Пользователь с данным email уже существует"]);
     }
   }
 
@@ -74,8 +74,7 @@ function Registration(props) {
       <div className="registration__preview">
         <h3 className="registration__header">Добро пожаловать в MonyFy</h3>
         <p className="registration__text">
-          Добро пожаловать в MonyFyДобро пожаловать в MonyFyДобро пожаловать в
-          MonyFyДобро пожаловать в MonyFy
+          Приложение по учету рассходов. Мы поможем вам эффективно экономить
         </p>
         <button
           className="registration__registration-button"

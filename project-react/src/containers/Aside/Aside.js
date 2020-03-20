@@ -7,7 +7,6 @@ import "./Aside.scss";
 import UserBox from "../../components/app/UserBox/UserBox";
 
 function Aside(props) {
-  console.log(props);
   return (
     <aside className="aside">
       <div className="aside__box-logo">MonyFy</div>

@@ -3,7 +3,7 @@ import './TopSpanding.scss';
 
 function TopSpanding(props) {
     return (
-        <div>
+        <div className='topSpanding info-card'>
             
         </div>
     );

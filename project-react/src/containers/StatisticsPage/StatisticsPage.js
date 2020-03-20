@@ -1,26 +1,60 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+
+import {
+  loadOperations,
+  setSelectedDate
+} from "../../store/statisticsPage/actions";
+
 import "./StatisticsPage.scss";
 
+import DateBox from "../../components/statisticsPage/DateBox/DateBox";
+import OperationList from "../../components/statisticsPage/OperationList/OperationList";
+import StatChart from "../../components/statisticsPage/StatChart/StatChart";
+import TopSpanding from "../../components/statisticsPage/TopSpanding/TopSpanding";
+
 class StatisticsPage extends Component {
+  componentDidMount() {
+    const {
+      loadOperations,
+      selectedDate,
+      user: { id }
+    } = this.props;
+    loadOperations(id, selectedDate.startDate, selectedDate.finishDate);
+  }
+
+  componentDidUpdate() {
+    if (!this.props.isRelevant) {
+      const {
+        loadOperations,
+        selectedDate,
+        user: { id }
+      } = this.props;
+      loadOperations(id, selectedDate.startDate, selectedDate.finishDate);
+    }
+  }
+
   render() {
-    return <div className={"statistics-page"}>
-      <div>1</div>
-      <div>1</div>
-      <div>1</div>
-      <div>1</div>
-    </div>;
+    return (
+      <div className={"statistics-page"}>
+        <StatChart />
+        <DateBox setSelectedDate={this.props.setSelectedDate} />
+        <TopSpanding />
+        <OperationList />
+      </div>
+    );
   }
 }
 
 function mapStateToProps(store) {
   return {
-    
+    user: store.auth.authorizedUser,
+    operations: store.statisticsPage.operations,
+    selectedDate: store.statisticsPage.selectedDate,
+    isRelevant: store.statisticsPage.isRelevant
   };
 }
 
-const mapDispatchToProps = {
-  
-};
+const mapDispatchToProps = { loadOperations, setSelectedDate };
 
-export default connect()(StatisticsPage);
+export default connect(mapStateToProps, mapDispatchToProps)(StatisticsPage);

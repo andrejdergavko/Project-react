@@ -6,8 +6,8 @@ export const CATEGORY_PAGE_LOAD_DAILY_OPERATIONS_SUCCESS =
 export const CATEGORY_PAGE_SET_SELECTED_DATE =
   "CATEGORY_PAGE_SET_SELECTED_DATE";
 
-export const CATEGORY_PAGE_CHANGE_DATA_RELEVANCE =
-  "CATEGORY_PAGE_CHANGE_DATA_RELEVANCE";
+export const CATEGORY_PAGE_CHANGE_DATA_RELEVANT =
+  "CATEGORY_PAGE_CHANGE_DATA_RELEVANT";
 
 export const loadDailyOperationsSuccess = operations => ({
   type: CATEGORY_PAGE_LOAD_DAILY_OPERATIONS_SUCCESS,
@@ -23,8 +23,8 @@ export const setSelectedDate = date => ({
   }
 });
 
-export const changeDataRelevance = isRelevant => ({
-  type: CATEGORY_PAGE_CHANGE_DATA_RELEVANCE,
+export const changeDataRelevant = isRelevant => ({
+  type: CATEGORY_PAGE_CHANGE_DATA_RELEVANT,
   payload: {
     isRelevant
   }
@@ -40,13 +40,13 @@ export const loadDailyOperations = (id, date) => dispatch => {
       dispatch(loadDailyOperationsSuccess(json));
     })
     .then(() => dispatch(setSelectedDate(date)))
-    .then(() => dispatch(changeDataRelevance(true)));
+    .then(() => dispatch(changeDataRelevant(true)));
 };
 
 export const setOperation = operation => dispatch => {
-  Api.setOperation(operation).then(() => dispatch(changeDataRelevance(false)));
+  Api.setOperation(operation).then(() => dispatch(changeDataRelevant(false)));
 };
 
 export const deleteOperation = id => dispatch => {
-  Api.deleteOperation(id).then(() => dispatch(changeDataRelevance(false)));
+  Api.deleteOperation(id).then(() => dispatch(changeDataRelevant(false)));
 };

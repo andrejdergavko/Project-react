@@ -15,7 +15,6 @@ import {
 class CategoryPage extends Component {
   constructor(props) {
     super(props);
-
     this.refreshOperations = this.refreshOperations.bind(this);
   }
 
