@@ -1,5 +1,16 @@
 @import "../../../style/variables.scss";
 
 .operationList {
-    grid-row: 2/4;
+  grid-row: 2/4;
+}
+
+.operationList {
+  display: flex;
+  flex-direction: column;
+}
+
+.operationList__wrapper {
+  flex-grow: 1;
+  flex-basis: 200px;
+  overflow-y: auto;
 }

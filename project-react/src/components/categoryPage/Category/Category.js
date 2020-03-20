@@ -3,7 +3,7 @@ import "./Category.scss";
 
 function Category(props) {
   const { title, value, color, currency, onClick, icon } = props;
-  console.log(icon)
+ 
   return (
     <div className="category">
       <div className="category__header">{title}</div>

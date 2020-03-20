@@ -1,5 +1,45 @@
 @import "../../../style/variables.scss";
 
-.operationList {
-    grid-row: 2/4;
+.operationRow {
+}
+
+.operationRow td {
+  padding: 5px 12px;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.operationRow__icon-box {
+  padding: 50px;
+  width: 50px;
+}
+
+.operationRow__circle {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(195, 195, 195);
+  border-radius: 50%;
+}
+
+.operationRow__icon {
+  width: 15px;
+  height: 15px;
+}
+
+.operationRow__value-box {
+  text-align: right;
+}
+
+.operationRow__value {
+  display: inline;
+  font-weight: 500;
+}
+
+.operationRow__currency {
+  display: inline;
+  margin-left: 5px;
+  font-size: 14px;
 }

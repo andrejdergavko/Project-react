@@ -1,5 +1,31 @@
 @import "../../../style/variables.scss";
 
-.operationList {
-    grid-row: 2/4;
+.dateRow {
+  background-color: rgb(245, 245, 245);
+  box-shadow: inset 0 15px 15px -15px rgb(224, 224, 224);
+}
+
+.dateRow td {
+  padding: 0px 12px;
+  line-height: 1.3;
+}
+
+.dateRow__number {
+  display: inline-block;
+  font-size: 30px;
+  margin: 0 15px;
+}
+
+.dateRow__date-box {
+  display: inline-block;
+  height: 100%;
+  font-size: 14px;
+}
+
+.dateRow__day {
+  color: #999;
+}
+
+.dateRow__date {
+  font-weight: 500;
 }

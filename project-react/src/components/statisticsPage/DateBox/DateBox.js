@@ -22,7 +22,8 @@ function DateBox({ setSelectedDate }) {
 
   const handleSubmit = event => {
     event.preventDefault();
-    setSelectedDate(startDate, finishDate);
+    console.log(startDate, finishDate);
+    setSelectedDate(startDate.getTime(), finishDate.getTime());
   };
 
   const setIntervalForDays = deys => {

@@ -40,7 +40,11 @@ class StatisticsPage extends Component {
         <StatChart />
         <DateBox setSelectedDate={this.props.setSelectedDate} />
         <TopSpanding />
-        <OperationList />
+        <OperationList
+          operations={this.props.operations}
+          categories={this.props.categories}
+          currency={this.props.user.currency}
+        />
       </div>
     );
   }
@@ -50,6 +54,7 @@ function mapStateToProps(store) {
   return {
     user: store.auth.authorizedUser,
     operations: store.statisticsPage.operations,
+    categories: store.app.categories,
     selectedDate: store.statisticsPage.selectedDate,
     isRelevant: store.statisticsPage.isRelevant
   };

@@ -32,7 +32,7 @@ function ShoppingTable({
 
   return (
     <div className="shoppingTable info-card">
-      <div className="shoppingTable__wrapper info-card">
+      <div className="shoppingTable__wrapper">
         <table className="shoppingTable__table table">
           <thead>
             <tr>
