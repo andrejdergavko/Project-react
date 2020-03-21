@@ -35,9 +35,15 @@ class StatisticsPage extends Component {
   }
 
   render() {
+    console.log(
+      "operat",
+      this.props.operations,
+      "date",
+      this.props.selectedDate
+    );
     return (
       <div className={"statistics-page"}>
-        <StatChart />
+        <StatChart operations={this.props.operations} />
         <DateBox
           setSelectedDate={this.props.setSelectedDate}
           selectedDate={this.props.selectedDate}

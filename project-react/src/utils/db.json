@@ -99,13 +99,6 @@
   ],
   "operations": [
     {
-      "id": "IGZ23ScZB6aP-PpT8Ji1h",
-      "userId": "MhC2IaK1D2D0CqvVUyQSw",
-      "categoryId": "1",
-      "value": 1,
-      "date": 1584795777780
-    },
-    {
       "id": "xR2AZzRQWGa0p4HQi4Ni1",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
       "categoryId": "2",
@@ -127,39 +120,53 @@
       "date": 1583154180000
     },
     {
-      "id": "Ye4shQuD8OD9vT1npbqS4",
+      "id": "EdE0PlGsLUkiJ1-o6tbhu",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
-      "categoryId": "100",
-      "value": null,
-      "date": 1584796421227
+      "categoryId": "60",
+      "value": 89,
+      "date": 1584820713922
     },
     {
-      "id": "ycD08sJsNvX9F8CDJRQHy",
+      "id": "q4KYhPexziI74xJlq77-J",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
-      "categoryId": "100",
-      "value": 25,
-      "date": 1584796421227
+      "categoryId": "3",
+      "value": 44,
+      "date": 1584820713922
     },
     {
-      "id": "311oD0-KOtBTspzSJ2Eco",
+      "id": "H73Ubg_pjhKxANFB6wf1F",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "50",
+      "value": 88,
+      "date": 1584820713922
+    },
+    {
+      "id": "apcqDQw9O2DeJac6tQQXF",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
       "categoryId": "40",
-      "value": 585,
-      "date": 1584796441751
-    },
-    {
-      "id": "JI65tR8Ylzqjb8-6DgW2J",
-      "userId": "MhC2IaK1D2D0CqvVUyQSw",
-      "categoryId": "30",
       "value": 55,
-      "date": 1584798117575
+      "date": 1584475140000
     },
     {
-      "id": "CO17fb5Jaidl7csgSir1E",
+      "id": "t2mf5frqwmgNLJhX5irQM",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
       "categoryId": "2",
-      "value": 5,
-      "date": 1584800556506
+      "value": 55,
+      "date": 1584388740000
+    },
+    {
+      "id": "1TrMGAvR-gKPOV7EYUC2L",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "10",
+      "value": 43,
+      "date": 1584302340000
+    },
+    {
+      "id": "yrrrI-xSHtQdGUHP3e5Ci",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "10",
+      "value": 4,
+      "date": 1583956740000
     }
   ],
   "currencies": [

@@ -32,6 +32,7 @@ export const loadOperationsSuccess = operations => ({
 });
 
 export const loadOperations = (id, startDate, finishDate) => dispatch => {
+  console.log('action')
   Api.loadOperations(startDate, finishDate, id)
     .then(response => response.json())
     .then(json => {
