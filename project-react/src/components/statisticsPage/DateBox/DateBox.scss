@@ -2,27 +2,46 @@
 
 .dateBox {
   grid-row: 1/2;
+  // background-color: #78899b;
 }
 
 .dateBox__form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+  height: 100%;
   padding: 25px;
 }
 
 .dateBox__label {
   padding: 0 20px 0 0;
+  font-size: 18px;
 }
 
 .dateBox__pickers {
   display: inline-block;
-  grid-column: 1/4;
+  grid-column: 1/5;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .dateBox__picker-wrapper {
   display: inline-block;
   width: 100px;
   margin-right: 20px;
+}
+
+.dateBox__button {
+  border: none;
+  padding: 5px 10px;
+  height: 100%;
+  background-color: #556474;
+  color: rgb(236, 236, 236);
+  transition: 0.2s;
+  font-size: 15px;
+}
+
+.dateBox__button:hover {
+  background-color: #6b7d90;
+  color: rgb(255, 255, 255);
 }

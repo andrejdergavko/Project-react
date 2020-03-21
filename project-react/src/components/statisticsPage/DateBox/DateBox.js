@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { createMuiTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 import DateFnsUtils from "@date-io/date-fns";
@@ -16,27 +16,33 @@ const defaultMaterialTheme = createMuiTheme({
   }
 });
 
-function DateBox({ setSelectedDate }) {
-  const [startDate, setStartDate] = useState(0);
-  const [finishDate, setFinishDate] = useState(0);
+function DateBox({ setSelectedDate, selectedDate }) {
+  const [startDate, setStartDate] = useState(new Date(selectedDate.startDate));
+  const [finishDate, setFinishDate] = useState(
+    new Date(selectedDate.finishDate)
+  );
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    console.log(startDate, finishDate);
+  useEffect(() => {
     setSelectedDate(startDate.getTime(), finishDate.getTime());
-  };
+  }, [startDate, finishDate]);
+
+  // const handleSubmit = event => {
+  //   event.preventDefault();
+  //   console.log(53563);
+  //   setSelectedDate(startDate.getTime(), finishDate.getTime());
+  // };
 
   const setIntervalForDays = deys => {
-    const dateNow = Date.now();
+    const dateNow = new Date();
     setFinishDate(dateNow);
-    setStartDate(dateNow - DAY_IN_MILLISECONDS * deys);
+    setStartDate(new Date(dateNow.getTime() - DAY_IN_MILLISECONDS * deys));
   };
 
   return (
     <ThemeProvider theme={defaultMaterialTheme}>
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
         <div className="dateBox info-card">
-          <form className="dateBox__form" onSubmit={handleSubmit}>
+          <form className="dateBox__form">
             <div className="dateBox__pickers">
               <label htmlFor="startDate" className="dateBox__label">
                 От
@@ -67,11 +73,34 @@ function DateBox({ setSelectedDate }) {
                 />
               </div>
             </div>
-
-            <input type="submit" value="Сохранить" />
-            <button onClick={() => setIntervalForDays(7)}>7 дней</button>
-            <button onClick={() => setIntervalForDays(30)}>30 дней</button>
-            <button onClick={() => setIntervalForDays(365)}>Год </button>
+            <button
+              type="button"
+              className="dateBox__button"
+              onClick={() => setIntervalForDays(1)}
+            >
+              Сегодня
+            </button>
+            <button
+              type="button"
+              className="dateBox__button"
+              onClick={() => setIntervalForDays(7)}
+            >
+              7 дней
+            </button>
+            <button
+              type="button"
+              className="dateBox__button"
+              onClick={() => setIntervalForDays(31)}
+            >
+              31 дней
+            </button>
+            <button
+              type="button"
+              className="dateBox__button"
+              onClick={() => setIntervalForDays(365)}
+            >
+              Год{" "}
+            </button>
           </form>
         </div>
       </MuiPickersUtilsProvider>

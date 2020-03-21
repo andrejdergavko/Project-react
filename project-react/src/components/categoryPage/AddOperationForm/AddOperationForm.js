@@ -45,12 +45,13 @@ function AddOperationForm(props) {
           />
           <div className="addOperationForm__cyrrency">{currency}</div>
           <div className="addOperationForm__button-block">
-            <button
+            <input
+              type="button"
               className="addOperationForm__button button"
               onClick={() => push("/")}
-            >
-              Закрыть
-            </button>
+              value='Закрыть'
+            />
+             
             <input
               className="addOperationForm__submit button"
               type="submit"
