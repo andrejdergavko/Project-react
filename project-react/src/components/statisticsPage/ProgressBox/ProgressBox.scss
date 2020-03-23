@@ -1,0 +1,36 @@
+@import "../../../style/variables.scss";
+
+.progressBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progressBox__percent {
+  margin-left: 13px;
+  color: rgb(184, 184, 184);
+  font-weight: 500;
+}
+
+.progressBox__line-box {
+  position: relative;
+  width: 100%;
+  height: 4px;
+}
+
+.progressBox__line,
+.progressBox__line-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.progressBox__line {
+  width: 0%;
+}
+
+.progressBox__line-bg {
+  width: 100%;
+  background-color: rgb(236, 236, 236);
+}

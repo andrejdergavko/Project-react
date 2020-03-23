@@ -1,5 +1,14 @@
 @import "../../../style/variables.scss";
 
 .topSpanding {
-    grid-row: 3/4;
+  grid-row: 3/4;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topSpanding__wrapper {
+  flex-grow: 1;
+  flex-basis: 200px;
+  overflow-y: auto;
 }

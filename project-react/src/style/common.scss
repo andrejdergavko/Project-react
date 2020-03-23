@@ -8,8 +8,6 @@
 }
 
 .button {
-
-
   padding: 13px 40px;
   width: min-content;
   border: none;
@@ -23,4 +21,19 @@
 
 .button:hover {
   background-color: #233e61;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #878c92;
 }

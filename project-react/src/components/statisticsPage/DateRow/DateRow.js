@@ -13,7 +13,7 @@ function DateRow(props) {
         <div className="dateRow__number">{date.getDate()}</div>
         <div className="dateRow__date-box">
           <div className="dateRow__day">
-            {DAYS_OF_THE_WEEK[date.getDay() - 1]}
+            {DAYS_OF_THE_WEEK[date.getDay()]}
           </div>
           <div className="dateRow__date">{`${
             MONTHS[date.getMonth()]

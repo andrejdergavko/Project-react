@@ -11,7 +11,7 @@ const initialState = {
     startDate: Date.now() - WEEK_IN_MILLISECONDS,
     finishDate: Date.now()
   },
-  isRelevant: false
+  isRelevant: false,
 };
 
 export function statisticsPageReducer(state = initialState, action) {
@@ -19,21 +19,23 @@ export function statisticsPageReducer(state = initialState, action) {
     case STATISTICS_PAGE_LOAD_OPERATIONS_SUCCESS:
       return {
         ...state,
-        operations: action.payload.operations
+        operations: action.payload.operations,
+        isRelevant: true,
       };
     case STATISTICS_PAGE_CHANGE_DATA_RELEVANT:
       return {
         ...state,
-        isRelevant: action.payload.isRelevant
+        isRelevant: action.payload.isRelevant,
       };
     case STATISTICS_PAGE_SET_SELECTED_DATE:
+      console.log('сработал сет дейта')
       return {
         ...state,
         selectedDate: {
           startDate: action.payload.startDate,
           finishDate: action.payload.finishDate
         },
-        isRelevant: false
+        isRelevant: false,
       };
 
     default:

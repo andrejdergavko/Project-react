@@ -23,19 +23,14 @@ function DateBox({ setSelectedDate, selectedDate }) {
   );
 
   useEffect(() => {
-    setSelectedDate(startDate.getTime(), finishDate.getTime());
-  }, [startDate, finishDate]);
-
-  // const handleSubmit = event => {
-  //   event.preventDefault();
-  //   console.log(53563);
-  //   setSelectedDate(startDate.getTime(), finishDate.getTime());
-  // };
+    setSelectedDate(startDate.getTime(), finishDate.setHours(23, 59, 59, 999));
+  }, [startDate, finishDate, setSelectedDate]);
 
   const setIntervalForDays = deys => {
     const dateNow = new Date();
+    setStartDate(new Date(new Date().setHours(0, 0, 0, 0) - DAY_IN_MILLISECONDS * deys));
     setFinishDate(dateNow);
-    setStartDate(new Date(dateNow.getTime() - DAY_IN_MILLISECONDS * deys));
+    
   };
 
   return (
@@ -76,28 +71,28 @@ function DateBox({ setSelectedDate, selectedDate }) {
             <button
               type="button"
               className="dateBox__button"
-              onClick={() => setIntervalForDays(1)}
+              onClick={() => setIntervalForDays(0)}
             >
               Сегодня
             </button>
             <button
               type="button"
               className="dateBox__button"
-              onClick={() => setIntervalForDays(7)}
+              onClick={() => setIntervalForDays(6)}
             >
               7 дней
             </button>
             <button
               type="button"
               className="dateBox__button"
-              onClick={() => setIntervalForDays(31)}
+              onClick={() => setIntervalForDays(30)}
             >
               31 дней
             </button>
             <button
               type="button"
               className="dateBox__button"
-              onClick={() => setIntervalForDays(365)}
+              onClick={() => setIntervalForDays(364)}
             >
               Год{" "}
             </button>

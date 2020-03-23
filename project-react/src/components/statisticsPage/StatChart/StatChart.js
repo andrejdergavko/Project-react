@@ -7,7 +7,9 @@ import "./StatChart.scss";
 defaults.global.defaultFontFamily = "Montserrat";
 
 const options = {
+  maintainAspectRatio: false,
   tooltips: {
+    enabled: false,
     caretSize: 10,
     xPadding: 16,
     yPadding: 10,
@@ -15,10 +17,10 @@ const options = {
     titleFontColor: "#eee",
     bodyFontColor: "#eee",
     titleFontStyle: "normal",
-    titleFontFamily: "Open Sans",
-    bodyFontFamily: "Open Sans",
+    titleFontFamily: "Montserrat",
+    bodyFontFamily: "Montserrat",
     titleMarginBottom: 15,
-    cornerRadius: 10,
+    cornerRadius: 0,
     displayColors: false
   },
   legend: {
@@ -32,11 +34,11 @@ const options = {
           display: false
         },
         type: "time",
-        distribution: "series",
+        // distribution: "series",
         time: {
           unit: "day",
           //   round: "day",
-          //   unitStepSize: 1,
+          unitStepSize: 1,
           tooltipFormat: "MM.DD h:mm",
           displayFormats: {
             day: "DD.MM"
@@ -91,7 +93,7 @@ function StatChart({ operations }) {
       }
     ]
   };
- 
+
   return (
     <div className="statChart info-card">
       <Bar data={data} options={options} />

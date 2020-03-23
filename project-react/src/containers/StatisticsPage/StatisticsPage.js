@@ -14,14 +14,14 @@ import StatChart from "../../components/statisticsPage/StatChart/StatChart";
 import TopSpanding from "../../components/statisticsPage/TopSpanding/TopSpanding";
 
 class StatisticsPage extends Component {
-  componentDidMount() {
-    const {
-      loadOperations,
-      selectedDate,
-      user: { id }
-    } = this.props;
-    loadOperations(id, selectedDate.startDate, selectedDate.finishDate);
-  }
+  // componentDidMount() {
+  //   const {
+  //     loadOperations,
+  //     selectedDate,
+  //     user: { id }
+  //   } = this.props;
+  //   loadOperations(id, selectedDate.startDate, selectedDate.finishDate);
+  // }
 
   componentDidUpdate() {
     if (!this.props.isRelevant) {
@@ -39,8 +39,11 @@ class StatisticsPage extends Component {
       "operat",
       this.props.operations,
       "date",
-      this.props.selectedDate
+      this.props.selectedDate,
+      "relevant",
+      this.props.isRelevant
     );
+
     return (
       <div className={"statistics-page"}>
         <StatChart operations={this.props.operations} />
@@ -48,7 +51,11 @@ class StatisticsPage extends Component {
           setSelectedDate={this.props.setSelectedDate}
           selectedDate={this.props.selectedDate}
         />
-        <TopSpanding />
+        <TopSpanding
+          operations={this.props.operations}
+          categories={this.props.categories}
+          currency={this.props.user.currency}
+        />
         <OperationList
           operations={this.props.operations}
           categories={this.props.categories}

@@ -99,13 +99,6 @@
   ],
   "operations": [
     {
-      "id": "xR2AZzRQWGa0p4HQi4Ni1",
-      "userId": "MhC2IaK1D2D0CqvVUyQSw",
-      "categoryId": "2",
-      "value": 2,
-      "date": 1584709380000
-    },
-    {
       "id": "GQ4eQXVqCF4ENasZtAP8V",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
       "categoryId": "10",
@@ -167,6 +160,97 @@
       "categoryId": "10",
       "value": 4,
       "date": 1583956740000
+    },
+    {
+      "id": "XaU6NcTdYwOsPqN_oyirL",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "10",
+      "value": 87,
+      "date": 1584779460000
+    },
+    {
+      "id": "2bD8GITqhw6KdFfL-vuTr",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "2",
+      "value": 54,
+      "date": 1584866529533
+    },
+    {
+      "id": "Tt1WVqXK0bYfm9nNFQPiy",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "40",
+      "value": 50,
+      "date": 1584693720000
+    },
+    {
+      "id": "87zBCrfe2U9ZIMbURhoP_",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "1",
+      "value": 10,
+      "date": 1584693720000
+    },
+    {
+      "id": "8o0ZxDDO5FVale7Pa3g9r",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "100",
+      "value": 80,
+      "date": 1584693720000
+    },
+    {
+      "id": "B9s5aQubqzeLoJfE23SfI",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "1",
+      "value": 10,
+      "date": 1584867600000
+    },
+    {
+      "id": "ih3h9vAkmgQCMa9Ld_IH7",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "10",
+      "value": 55,
+      "date": 1584867600000
+    },
+    {
+      "id": "DhPHaac_2x8inamAq6-3g",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "50",
+      "value": 12,
+      "date": 1584867600000
+    },
+    {
+      "id": "pxz5rg2u5RdUYULFzxie6",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "100",
+      "value": 88,
+      "date": 1584886860000
+    },
+    {
+      "id": "MFZyEYp_cRvpXmxQp39sG",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "30",
+      "value": 89,
+      "date": 1584886860000
+    },
+    {
+      "id": "zAKsgWT4x5QdFjnB85dZr",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "40",
+      "value": 10,
+      "date": 1584886860000
+    },
+    {
+      "id": "ONEQLjMhHCDUmtCzgp1bg",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "40",
+      "value": 88,
+      "date": 1584973560000
+    },
+    {
+      "id": "OcEPVGl0BsbK71Y3R1nqP",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "10",
+      "value": 87,
+      "date": 1584981449590
     }
   ],
   "currencies": [
