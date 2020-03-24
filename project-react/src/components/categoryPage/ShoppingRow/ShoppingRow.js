@@ -9,16 +9,7 @@ function getDateToString(dateObject) {
   return `${date}.${month}.${year}`;
 }
 
-function ShoppingRow({
-  title,
-  color,
-  date,
-  value,
-  currency,
-  deleteOperation
-}) {
-
-
+function ShoppingRow({ title, color, date, value, currency, deleteOperation }) {
   return (
     <tr className="shoppingRow">
       <th className="shoppingRow__circle-col">
@@ -34,7 +25,15 @@ function ShoppingRow({
         <span className="shoppingRow__currency">{currency}</span>
       </td>
       <td>
-        <button className="shoppingRow__delete-button" onClick={deleteOperation}>&#215;</button>
+        <button
+          className="shoppingRow__delete-button"
+          onClick={deleteOperation}
+        >
+          <img
+            className="shoppingRow__delete-icon"
+            src="https://img.icons8.com/ios/96/000000/delete-forever.png"
+          />
+        </button>
       </td>
     </tr>
   );

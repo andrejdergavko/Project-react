@@ -23,8 +23,9 @@
   justify-content: center;
   background-color: rgb(111, 109, 133);
   color: $text-color;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 300;
+  box-shadow:  0 15px 15px -15px rgb(182, 182, 182);
 }
 
 .addOperationForm__form {
@@ -58,6 +59,7 @@
     justify-content: space-between;
 }
 
-.addOperationForm__submit {
-  
+.addOperationForm__button {
+  width: 48%;
+  box-shadow: 0 15px 15px -15px rgb(182, 182, 182);
 }

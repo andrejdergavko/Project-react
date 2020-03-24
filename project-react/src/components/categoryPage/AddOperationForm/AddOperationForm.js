@@ -53,7 +53,7 @@ function AddOperationForm(props) {
             />
              
             <input
-              className="addOperationForm__submit button"
+              className="addOperationForm__button addOperationForm__button_submit button"
               type="submit"
               value="Сохранить"
             />

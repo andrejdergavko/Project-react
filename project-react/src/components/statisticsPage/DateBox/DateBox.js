@@ -28,9 +28,10 @@ function DateBox({ setSelectedDate, selectedDate }) {
 
   const setIntervalForDays = deys => {
     const dateNow = new Date();
-    setStartDate(new Date(new Date().setHours(0, 0, 0, 0) - DAY_IN_MILLISECONDS * deys));
+    setStartDate(
+      new Date(new Date().setHours(0, 0, 0, 0) - DAY_IN_MILLISECONDS * deys)
+    );
     setFinishDate(dateNow);
-    
   };
 
   return (
