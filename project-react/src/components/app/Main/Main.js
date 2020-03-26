@@ -6,7 +6,7 @@ import "./Main.scss";
 import CategoryPage from "../../../containers/CategoryPage/CategoryPage";
 import StatisticsPage from "../../../containers/StatisticsPage/StatisticsPage";
 
-function Main(props) {
+function Main() {
   return (
     <div className="main">
       <Switch>

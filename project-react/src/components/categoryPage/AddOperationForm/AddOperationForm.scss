@@ -25,7 +25,7 @@
   color: $text-color;
   font-size: 35px;
   font-weight: 300;
-  box-shadow:  0 15px 15px -15px rgb(182, 182, 182);
+  box-shadow: 0 15px 15px -15px rgb(182, 182, 182);
 }
 
 .addOperationForm__form {
@@ -54,12 +54,18 @@
 }
 
 .addOperationForm__button-block {
-    grid-column: 1/4;
-    display: flex;
-    justify-content: space-between;
+  grid-column: 1/4;
+  display: flex;
+  justify-content: space-between;
 }
 
 .addOperationForm__button {
   width: 48%;
   box-shadow: 0 15px 15px -15px rgb(182, 182, 182);
+}
+
+.addOperationForm__error-block {
+  grid-column: 1/4;
+  color: rgb(245, 37, 37);
+  font-size: 14px;
 }

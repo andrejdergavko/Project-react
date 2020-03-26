@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
-// import { TransitionGroup, CSSTransition } from "react-transition-group";
 
+import "./AuthContainer.scss";
 
 import Authorization from "../../components/auth/Authorization/Authorization";
 import Registration from "../../components/auth/Registration/Registration";
-import { loginUser, createUser, loadCurrencies } from "../../store/auth/actions";
-
-import "./AuthContainer.scss";
+import {
+  loginUser,
+  createUser,
+  loadCurrencies
+} from "../../store/auth/actions";
 
 class AuthContainer extends Component {
   constructor(props) {
@@ -29,10 +31,14 @@ class AuthContainer extends Component {
     });
   }
 
-
   render() {
     return (
       <div className="auth-container">
+        <div className="auth-container__presentation-account">
+          <div>presentation account</div>
+          <div>login: andrei@gmail.com</div>
+          <div>password: 111111</div>
+        </div>
         {this.props.authorizedUser && <Redirect to="/" />}
         {this.state.registrationMode ? (
           <Registration
@@ -62,7 +68,7 @@ function mapStateToProps(store) {
 const mapDispatchToProps = {
   loginUser,
   loadCurrencies,
-  createUser,
+  createUser
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AuthContainer);

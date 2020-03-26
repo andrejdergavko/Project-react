@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
 import "./Datepicker.scss";
 
 import { createMuiTheme } from "@material-ui/core";

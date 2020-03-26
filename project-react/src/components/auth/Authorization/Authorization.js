@@ -3,6 +3,8 @@ import Checkbox from "@material-ui/core/Checkbox";
 
 import "./Authorization.scss";
 
+import Api from "../../../utils/api";
+
 function Authorization(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,9 +24,7 @@ function Authorization(props) {
   }
 
   function isPasswordCorrect(email, password) {
-    return fetch(
-      `http://localhost:3001/users?email=${email}&password=${password}`
-    )
+    return Api.loginUser(email, password)
       .then(response => response.json())
       .then(users => (users[0] ? true : false));
   }
@@ -92,7 +92,11 @@ function Authorization(props) {
           </label>
         </div>
 
-        <input className="authorization__submit button" type="submit" value="Войти" />
+        <input
+          className="authorization__submit button"
+          type="submit"
+          value="Войти"
+        />
       </form>
     </div>
   );

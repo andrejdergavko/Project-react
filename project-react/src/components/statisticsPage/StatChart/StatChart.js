@@ -34,10 +34,8 @@ const options = {
           display: false
         },
         type: "time",
-        // distribution: "series",
         time: {
           unit: "day",
-          //   round: "day",
           unitStepSize: 1,
           tooltipFormat: "MM.DD h:mm",
           displayFormats: {

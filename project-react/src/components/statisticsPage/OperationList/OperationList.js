@@ -19,11 +19,12 @@ function OperationList({ operations, categories, currency }) {
     if (!category) return;
     if (currentDay !== lastDay) {
       lastDay = currentDay;
-      rows.push(<DateRow date={currentDay} />);
+      rows.push(<DateRow key={currentDay} date={currentDay} />);
     }
 
     rows.push(
       <OperationRow
+        key={operation.id}
         title={category.title}
         color={category.color}
         value={operation.value}
@@ -36,7 +37,7 @@ function OperationList({ operations, categories, currency }) {
   return (
     <div className="operationList info-card">
       <div className="operationList__wrapper">
-        <table class="table">
+        <table className="table">
           <tbody>{rows}</tbody>
         </table>
       </div>

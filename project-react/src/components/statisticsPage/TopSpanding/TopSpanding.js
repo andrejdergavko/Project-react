@@ -18,6 +18,7 @@ function TopSpanding({ operations, categories, currency }) {
       }
     }, 0);
     return {
+      id: category.id,
       color: category.color,
       title: category.title,
       currency: currency,
@@ -34,6 +35,7 @@ function TopSpanding({ operations, categories, currency }) {
         {sortItemsByRatio.map(item => {
           return (
             <ExpenseItem
+              key={item.id}
               color={item.color}
               title={item.title}
               currency={currency}

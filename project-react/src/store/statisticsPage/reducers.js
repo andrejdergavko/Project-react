@@ -28,7 +28,6 @@ export function statisticsPageReducer(state = initialState, action) {
         isRelevant: action.payload.isRelevant,
       };
     case STATISTICS_PAGE_SET_SELECTED_DATE:
-      console.log('сработал сет дейта')
       return {
         ...state,
         selectedDate: {

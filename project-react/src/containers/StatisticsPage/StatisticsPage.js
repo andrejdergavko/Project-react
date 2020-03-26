@@ -14,15 +14,6 @@ import StatChart from "../../components/statisticsPage/StatChart/StatChart";
 import TopSpanding from "../../components/statisticsPage/TopSpanding/TopSpanding";
 
 class StatisticsPage extends Component {
-  // componentDidMount() {
-  //   const {
-  //     loadOperations,
-  //     selectedDate,
-  //     user: { id }
-  //   } = this.props;
-  //   loadOperations(id, selectedDate.startDate, selectedDate.finishDate);
-  // }
-
   componentDidUpdate() {
     if (!this.props.isRelevant) {
       const {
@@ -35,15 +26,6 @@ class StatisticsPage extends Component {
   }
 
   render() {
-    console.log(
-      "operat",
-      this.props.operations,
-      "date",
-      this.props.selectedDate,
-      "relevant",
-      this.props.isRelevant
-    );
-
     return (
       <div className={"statistics-page"}>
         <StatChart operations={this.props.operations} />

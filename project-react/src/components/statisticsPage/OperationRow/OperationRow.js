@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./OperationRow.scss";
 
 function OperationRow(props) {
@@ -11,7 +12,13 @@ function OperationRow(props) {
           className="operationRow__circle"
           style={{ backgroundColor: color }}
         >
-          {icon && <img className="operationRow__icon" src={icon} />}
+          {icon && (
+            <img
+              className="operationRow__icon"
+              src={icon}
+              alt="Иконка операции"
+            />
+          )}
         </div>
       </td>
       <td className="operationRow__category">{title}</td>

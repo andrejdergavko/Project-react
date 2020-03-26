@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./ShoppingRow.scss";
 
 function getDateToString(dateObject) {
@@ -32,6 +33,7 @@ function ShoppingRow({ title, color, date, value, currency, deleteOperation }) {
           <img
             className="shoppingRow__delete-icon"
             src="https://img.icons8.com/ios/96/000000/delete-forever.png"
+            alt="Удалить"
           />
         </button>
       </td>

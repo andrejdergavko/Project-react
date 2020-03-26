@@ -9,12 +9,10 @@ function DateRow(props) {
 
   return (
     <tr className="dateRow">
-      <td colspan="3">
+      <td colSpan="3">
         <div className="dateRow__number">{date.getDate()}</div>
         <div className="dateRow__date-box">
-          <div className="dateRow__day">
-            {DAYS_OF_THE_WEEK[date.getDay()]}
-          </div>
+          <div className="dateRow__day">{DAYS_OF_THE_WEEK[date.getDay()]}</div>
           <div className="dateRow__date">{`${
             MONTHS[date.getMonth()]
           } ${date.getFullYear()}`}</div>

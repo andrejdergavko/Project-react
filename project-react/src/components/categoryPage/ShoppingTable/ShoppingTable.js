@@ -4,12 +4,7 @@ import "./ShoppingTable.scss";
 
 import ShoppingRow from "../ShoppingRow/ShoppingRow";
 
-function ShoppingTable({
-  categories,
-  operations,
-  currency,
-  deleteOperation
-}) {
+function ShoppingTable({ categories, operations, currency, deleteOperation }) {
   const tbody = operations.map(operation => {
     const category = categories.find(
       category => category.id === operation.categoryId

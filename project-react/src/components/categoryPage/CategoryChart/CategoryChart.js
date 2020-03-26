@@ -66,7 +66,6 @@ function CategoryChart(props) {
         },
         padding: 10,
         font: {
-          weight: "normal",
           size: "17",
           family: "Montserrat",
           weight: "400"

@@ -95,7 +95,7 @@ function DateBox({ setSelectedDate, selectedDate }) {
               className="dateBox__button"
               onClick={() => setIntervalForDays(364)}
             >
-              Год{" "}
+              Год
             </button>
           </form>
         </div>
