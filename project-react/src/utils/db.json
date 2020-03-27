@@ -86,20 +86,6 @@
   "castomCategories": [],
   "operations": [
     {
-      "id": "rXzIYH9fgXhrVQl8vfOcJ",
-      "userId": "MhC2IaK1D2D0CqvVUyQSw",
-      "categoryId": "2",
-      "value": 20,
-      "date": 1585220707177
-    },
-    {
-      "id": "cHYlYSdUI7Gdwc7H-qskn",
-      "userId": "MhC2IaK1D2D0CqvVUyQSw",
-      "categoryId": "10",
-      "value": 15,
-      "date": 1585220707177
-    },
-    {
       "id": "57OnA9EBgdbUdOz6YTvO-",
       "userId": "MhC2IaK1D2D0CqvVUyQSw",
       "categoryId": "1",
@@ -497,6 +483,41 @@
       "categoryId": "100",
       "value": 5,
       "date": 1585226839910
+    },
+    {
+      "id": "GUPlcfzNCzGdqM39vUoNm",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "2",
+      "value": 20,
+      "date": 1585302390410
+    },
+    {
+      "id": "0JkeQUiEqz6cRva6PMd2w",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "40",
+      "value": 10,
+      "date": 1585302390410
+    },
+    {
+      "id": "DALppGY8e0vhjqbgCMbyA",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "1",
+      "value": 30,
+      "date": 1585302390410
+    },
+    {
+      "id": "zXonSNiTX6gxYSCm6ol2b",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "10",
+      "value": 5,
+      "date": 1585302390410
+    },
+    {
+      "id": "xr6iQlblSweJRXx8w9m9I",
+      "userId": "MhC2IaK1D2D0CqvVUyQSw",
+      "categoryId": "4",
+      "value": 10,
+      "date": 1585302390410
     }
   ],
   "currencies": [
