@@ -3,6 +3,7 @@ import nanoid from "nanoid";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import Checkbox from "@material-ui/core/Checkbox";
+import { API_BASE_ADDRESS } from "../../../utils/api";
 
 import "./Registration.scss";
 
@@ -26,16 +27,16 @@ function Registration(props) {
     const errorMessages = validate([
       {
         name: "email",
-        value: email
+        value: email,
       },
       {
         name: "password",
-        value: password
+        value: password,
       },
       {
         name: "currency",
-        value: currency
-      }
+        value: currency,
+      },
     ]);
 
     if (errorMessages[0]) {
@@ -54,7 +55,7 @@ function Registration(props) {
           id: nanoid(),
           email,
           password,
-          currency
+          currency,
         },
         isRemembered
       );
@@ -64,9 +65,14 @@ function Registration(props) {
   }
 
   function isEmailUnique(email) {
-    return fetch(`http://localhost:3001/users?email=${email}`)
-      .then(response => response.json())
-      .then(json => json.length === 0);
+    console.log(`${API_BASE_ADDRESS}/users?email=${email}`);
+    return fetch(`${API_BASE_ADDRESS}/users?email=${email}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((json) => {
+        return json.length === 0;
+      });
   }
 
   return (
@@ -86,7 +92,7 @@ function Registration(props) {
 
       <form className="registration__form" onSubmit={handleSubmit}>
         <div className="registration__error-block">
-          {errors.map(error => {
+          {errors.map((error) => {
             return (
               <div key={error} className="registration__error">
                 {error}
@@ -101,7 +107,7 @@ function Registration(props) {
           className="registration__inpyt"
           type="email"
           value={email}
-          onChange={event => setEmail(event.target.value)}
+          onChange={(event) => setEmail(event.target.value)}
           name="email"
           placeholder="Введите email"
         />
@@ -113,7 +119,7 @@ function Registration(props) {
           className="registration__inpyt"
           type="password"
           value={password}
-          onChange={event => setPassword(event.target.value)}
+          onChange={(event) => setPassword(event.target.value)}
           name="password"
           placeholder="Введите пароль"
         />
@@ -122,7 +128,7 @@ function Registration(props) {
           className="registration__inpyt"
           type="password"
           value={passwordAgain}
-          onChange={event => setPasswordAgain(event.target.value)}
+          onChange={(event) => setPasswordAgain(event.target.value)}
           name="passwordAgain"
           placeholder="Введите пароль еще раз"
         />
@@ -134,7 +140,7 @@ function Registration(props) {
           className="registration__select"
           name="currency"
           value={currency}
-          onChange={event => setCurrency(event.target.value)}
+          onChange={(event) => setCurrency(event.target.value)}
           displayEmpty
         >
           <MenuItem value="" disabled>
@@ -143,7 +149,7 @@ function Registration(props) {
             </span>
           </MenuItem>
           {props.currencies &&
-            props.currencies.map(item => {
+            props.currencies.map((item) => {
               return (
                 <MenuItem
                   className="registration__menu-item"
@@ -159,7 +165,7 @@ function Registration(props) {
         <div className="registration__checkbox-wrapper">
           <Checkbox
             checked={isRemembered}
-            onChange={event => setIsRemembered(event.target.checked)}
+            onChange={(event) => setIsRemembered(event.target.checked)}
             value="primary"
             color="primary"
             inputProps={{ "aria-label": "primary checkbox" }}

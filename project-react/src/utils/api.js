@@ -1,5 +1,5 @@
 // const API_BASE_ADDRESS = "http://localhost:3001";
-const API_BASE_ADDRESS = "https://my-server-3214403.herokuapp.com";
+export const API_BASE_ADDRESS = "https://my-server-3214403.herokuapp.com";
 
 export default class Api {
   static loginUser(email, password) {
