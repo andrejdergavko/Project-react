@@ -12,6 +12,7 @@
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
     "chartjs-plugin-datalabels": "^0.7.0",
+    "concurrently": "^5.2.0",
     "date-fns": "^2.11.0",
     "json-server": "^0.16.1",
     "nanoid": "^2.1.11",
@@ -28,12 +29,12 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "dev-server": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "json-server": "json-server --watch src/utils/db.json --port 3001",
-    "start": "concurrently --kill-others \"react-scripts start\" \"json-server --watch src/utils/db.json --port 3001 --delay 100"
+    "start-with-server": "concurrently --kill-others \"react-scripts start\" \"json-server --watch src/utils/db.json --port 3001 --delay 100"
   },
   "eslintConfig": {
     "extends": "react-app"
