@@ -17,4 +17,6 @@ jobs:
       #   run: cd /project-react
 
       - name: Test
-        run: cd project-react yarn test
+        run: | 
+        cd project-react 
+        yarn test
