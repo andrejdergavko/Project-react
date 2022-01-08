@@ -14,7 +14,6 @@
     "chartjs-plugin-datalabels": "^0.7.0",
     "concurrently": "^5.2.0",
     "date-fns": "^2.11.0",
-    "jest": "^27.4.7",
     "json-server": "^0.16.1",
     "nanoid": "^2.1.11",
     "node-sass": "^4.13.1",
