@@ -15,4 +15,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Test
-        run: npm test
+        run:  |
+        cd project-react
+        npm test
