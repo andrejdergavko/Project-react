@@ -16,7 +16,6 @@
     "date-fns": "^2.11.0",
     "json-server": "^0.16.1",
     "nanoid": "^2.1.11",
-    "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.0",
@@ -31,7 +30,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --colors",
     "eject": "react-scripts eject",
     "json-server": "json-server --watch src/utils/db.json --port 3001",
     "start-with-server": "concurrently --kill-others \"react-scripts start\" \"json-server --watch src/utils/db.json --port 3001 --delay 100"
@@ -50,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.47.0"
   }
 }
