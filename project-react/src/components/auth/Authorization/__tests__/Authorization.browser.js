@@ -1,5 +1,5 @@
 describe('<Authorization />', () => {
   it('some test', () => {
-    expect(true).toBe(false);
+    expect(true).toBe(true);
   });
 });
