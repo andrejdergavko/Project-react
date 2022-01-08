@@ -13,10 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # - name: Go to project-react
-      #   run: cd /project-react
-
       - name: Test
-        run: | 
-        cd project-react 
-        yarn test
+        working-directory: ./project-react
+        run: yarn test
