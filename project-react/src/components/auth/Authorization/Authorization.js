@@ -32,7 +32,7 @@ function Authorization(props) {
   return (
     <div className="authorization">
       <div className="authorization__preview">
-        <h3 className="authorization__header">MonyFy1</h3>
+        <h3 className="authorization__header">MonyFy111</h3>
         <p className="authorization__text">
           Приложение по учету рассходов. Мы поможем вам эффективно экономить
         </p>
