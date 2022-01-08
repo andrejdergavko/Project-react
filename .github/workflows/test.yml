@@ -15,8 +15,8 @@ jobs:
 
       - name: Install Dependencies
         working-directory: ./project-react
-        run: yarn install
+        run: npm install
 
       - name: Test
         working-directory: ./project-react
-        run: yarn test
+        run: npm test
