@@ -15,4 +15,6 @@ jobs:
 
       - name: Test
         working-directory: ./project-react
-        run: yarn test
+        run: |
+        yarn install
+        yarn test
