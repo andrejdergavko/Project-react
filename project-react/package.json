@@ -16,7 +16,6 @@
     "date-fns": "^2.11.0",
     "json-server": "^0.16.1",
     "nanoid": "^2.1.11",
-    "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.0",
