@@ -34,7 +34,7 @@ function Authorization(props) {
       <div className="authorization__preview">
         <h3 className="authorization__header">MonyFy1</h3>
         <p className="authorization__text">
-          Приложение по учету рассходов. Мы поможем вам эффективно экономить
+          Приложение по учету рассходов
         </p>
         <button
           className="authorization__registration-button"
